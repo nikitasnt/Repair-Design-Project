@@ -12,6 +12,16 @@
       display: none
     &__content
       margin-left: 0
+@media screen and ( max-width: 760px )
+  .row
+    flex-direction: column
+    align-items: center
+  .types
+    &__card
+      margin-bottom: 6rem
+  .card
+    &__text
+      margin-left: 0
 @media screen and ( max-width: 570px )
   .contacts
     &__phone
@@ -34,6 +44,20 @@
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
+  .section-title
+    &__heading
+      font-size: 1.8rem
+  .card
+    margin-top: 1.3rem
+    margin-bottom: 5.4rem
+    width: 28.5rem
+    &__text
+      margin-top: -12.3rem
+    &__list
+      margin-bottom: 2rem
+    &__pricetag
+      padding: 0.98rem 2.6rem
+
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
