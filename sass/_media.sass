@@ -22,6 +22,11 @@
   .card
     &__text
       margin-left: 0
+  .section-title
+    &_light-text
+      color: $light
+  .design-project
+    background: $dark
 @media screen and ( max-width: 570px )
   .contacts
     &__phone
@@ -47,17 +52,35 @@
   .section-title
     &__heading
       font-size: 1.8rem
+    &__description
+      font-size: 1.1rem
+      max-width: 21.9rem
+      line-height: 1.7rem
   .card
     margin-top: 1.3rem
     margin-bottom: 5.4rem
     width: 28.5rem
     &__text
       margin-top: -12.3rem
+      max-width: 22.6rem
     &__list
       margin-bottom: 2rem
     &__pricetag
       padding: 0.98rem 2.6rem
+    &__item
+      &_phone
+        display: inline
+      &_phone-none
+        display: none
+  .design-project
+    &__section-title
+      margin-bottom: 2rem
+    &__pricetag
+      padding: 0.98rem 4rem
 
+@media screen and ( max-width: 350px )
+  .card
+    width: auto
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down

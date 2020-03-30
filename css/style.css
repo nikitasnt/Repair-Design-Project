@@ -426,6 +426,10 @@ img {
   font-family: 'Yeseva One', cursive;
 }
 
+.section-title__heading {
+  font-weight: normal;
+}
+
 .section-title__image {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -444,6 +448,16 @@ img {
   height: 2px;
   background-color: #E3B873;
   margin: 0 10px;
+}
+
+.section-title__description {
+  margin: 0 auto;
+  margin-top: 1.4rem;
+  max-width: 52.9rem;
+  font-family: 'Futura Book', sans-serif;
+  font-size: 1.43rem;
+  text-transform: none;
+  line-height: 1.93rem;
 }
 
 .header {
@@ -709,6 +723,23 @@ img {
           box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 }
 
+.design-project {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(53%, #ffffff), color-stop(47%, #131313));
+  background: linear-gradient(to bottom, #ffffff 53%, #131313 47%);
+}
+
+.design-project__section-title {
+  margin-bottom: 3.25rem;
+}
+
+.design-project__pricetag {
+  padding-right: 5.2rem;
+}
+
+.card__item_phone {
+  display: none;
+}
+
 @media screen and (max-width: 1243px) {
   .navbar__item {
     margin-right: 1rem;
@@ -746,6 +777,12 @@ img {
   .card__text {
     margin-left: 0;
   }
+  .section-title_light-text {
+    color: #ffffff;
+  }
+  .design-project {
+    background: #131313;
+  }
 }
 
 @media screen and (max-width: 570px) {
@@ -778,6 +815,11 @@ img {
   .section-title__heading {
     font-size: 1.8rem;
   }
+  .section-title__description {
+    font-size: 1.1rem;
+    max-width: 21.9rem;
+    line-height: 1.7rem;
+  }
   .card {
     margin-top: 1.3rem;
     margin-bottom: 5.4rem;
@@ -785,12 +827,31 @@ img {
   }
   .card__text {
     margin-top: -12.3rem;
+    max-width: 22.6rem;
   }
   .card__list {
     margin-bottom: 2rem;
   }
   .card__pricetag {
     padding: 0.98rem 2.6rem;
+  }
+  .card__item_phone {
+    display: inline;
+  }
+  .card__item_phone-none {
+    display: none;
+  }
+  .design-project__section-title {
+    margin-bottom: 2rem;
+  }
+  .design-project__pricetag {
+    padding: 0.98rem 4rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .card {
+    width: auto;
   }
 }
 
