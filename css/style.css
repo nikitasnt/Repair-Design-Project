@@ -887,6 +887,32 @@ img {
   padding: 1.29rem 3.6rem;
 }
 
+.up-button {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-color: #E3B873;
+  z-index: 198;
+  border: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.up-button__image {
+  width: 65%;
+  height: 65%;
+}
+
 @media screen and (max-width: 1243px) {
   .navbar__item {
     margin-right: 1rem;
