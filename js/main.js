@@ -30,7 +30,8 @@ $(document).ready(function () {
   });
 
   // кнопка наверх
-  var button = $('.up-button');	
+  var button = $('.up-button');
+  button.css('display', 'none');
   $(window).scroll (function () {
     if ($(this).scrollTop () > 300) {
       button.fadeIn();
