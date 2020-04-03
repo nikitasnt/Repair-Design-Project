@@ -1,0 +1,40 @@
+.swiper-2
+  &-slide
+    &__num
+      font-size: 1.29rem
+      font-weight: normal
+    &__heading
+      font-size: 1.07rem
+      line-height: 1.64rem
+      color: $primary
+      text-transform: uppercase
+      font-weight: normal
+    &__word
+      display: flex
+      align-items: center
+    &__description
+      font-family: 'Futura Book', sans-serif
+      font-size: 1.07rem
+      line-height: 1.79rem
+      font-weight: normal
+      max-width: 23.93rem
+      &_second
+        max-width: 21rem
+  &-button
+    &-prev, &-next
+      bottom: 0
+      top: auto
+      background-size: 42px
+      width: 42px
+      height: 14px
+      &::after
+        display: none
+  &-prev
+    left: 0
+    background: url('../img/arrow-prev.svg') no-repeat center
+  &-next
+    background: url('../img/arrow-next.svg') no-repeat center
+
+// пока убрал
+.steps
+  display: none

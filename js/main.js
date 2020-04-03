@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 */
 
 $(document).ready(function () {
+
+
+
   // закртыие и открытие модального окна кликами мыши
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
@@ -28,6 +31,8 @@ $(document).ready(function () {
   closeBtn.on('click', function () {
     modal.removeClass('modal_visible');
   });
+
+
 
   // кнопка наверх
   var button = $('.up-button');
@@ -46,23 +51,47 @@ $(document).ready(function () {
     return false;
   });
 
+  
+
   // Swiper Slider для секции "Завершенные Проекты"
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('.swiper-1-container', {
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-1-pagination',
       type: 'bullets',
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-1-button-next',
+      prevEl: '.swiper-1-button-prev',
     },
-  })
+  });
 
-  var next = $('.swiper-button-next');
-  var prev = $('.swiper-button-prev');
-  var bullets = $('.swiper-pagination');
+  var next = $('.swiper-1-button-next');
+  var prev = $('.swiper-1-button-prev');
+  var bullets = $('.swiper-1-pagination');
 
-  next.css('left', prev.width() + 25 + bullets.width() + 13)
-  bullets.css('left', prev.width() + 25)
+  next.css('left', prev.width() + 25 + bullets.width() + 13);
+  bullets.css('left', prev.width() + 25);
+
+
+  
+  // // Swiper Slider для секции "6 шагов"
+  // var mySwiper2 = new Swiper ('.swiper-2-container', {
+  //   loop: true,
+  //   pagination2: {
+  //     el: '.swiper-pagination',
+  //     type: 'bullets',
+  //   },
+  //   navigation2: {
+  //     nextEl: '.swiper-2-button-next',
+  //     prevEl: '.swiper-2-button-prev',
+  //   },
+  // });
+
+  // var next2 = $('.swiper-2-button-next');
+  // var prev2 = $('.swiper-2-button-prev');
+  // var bullets2 = $('.swiper-2-pagination');
+
+  // next2.css('left', prev2.width() + 25 + bullets2.width() + 13);
+  // bullets2.css('left', prev2.width() + 25);
 });
