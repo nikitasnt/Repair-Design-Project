@@ -28,6 +28,19 @@ $(document).ready(function () {
   closeBtn.on('click', function () {
     modal.removeClass('modal_visible');
   });
+  $(window).on('keyup', function(e) {
+    if (e.keyCode == 27) {
+      modal.removeClass('modal_visible');
+    }
+  });
+  modal.on('click', function(e){
+    if ($(e.target).removeClass('modal_visible')) {
+        // клик внутри элемента 
+        return;
+    }
+  });
+
+
 
   // кнопка наверх
   var button = $('.up-button');
@@ -45,6 +58,8 @@ $(document).ready(function () {
     }, 800);
     return false;
   });
+
+
 
   // Swiper Slider для секции "Завершенные Проекты"
   var mySwiper = new Swiper ('.swiper-container', {
