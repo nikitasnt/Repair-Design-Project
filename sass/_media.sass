@@ -95,9 +95,53 @@
         margin-bottom: 1.1rem
         &_margin-bottom
           margin-bottom: 3.96rem
+  .control
+    background-color: $dark
+    &__section-title
+      margin-bottom: 3.4rem
+    &__video
+      margin-bottom: 2.28rem
+      max-width: 30rem
+      min-height: 17rem
+      background-image: url('../img/video-mask-phone.jpg')
+    &__form
+      flex-direction: column
+    &__text
+      margin-bottom: 2.4rem
+      font-size: 1.3rem
+      line-height: 2rem
+      width: 27.24rem
+      &::before
+        margin-bottom: 1.26rem
+    &__label
+      margin-bottom: 0.1rem
+    &__input
+      border-bottom: 1px solid $light
+      &-group
+        margin-bottom: 5.25rem
+    &__button
+      order: 3
+      padding-top: 1.6rem
+      padding-bottom: 1.6rem
+      margin-bottom: -7.1rem
+      border-radius: 0
+    &__policy
+      margin-top: -4.5rem
+      margin-bottom: 5.1rem
+      font-size: 1.4rem
+      align-self: start
+    &__text, &__input, &__input::placeholder, &__policy
+      color: $light
+  .video
+    &__play
+      width: 65px
+      height: 65px
 @media screen and ( max-width: 350px )
   .card
     width: auto
+  .control
+    &__text
+      width: auto
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
