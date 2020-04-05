@@ -72,12 +72,26 @@ $(document).ready(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  })
+  });
 
   var next = $('.swiper-button-next');
   var prev = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination');
 
-  next.css('left', prev.width() + 25 + bullets.width() + 13)
-  bullets.css('left', prev.width() + 25)
+  next.css('left', prev.width() + 25 + bullets.width() + 13);
+  bullets.css('left', prev.width() + 25);
+
+
+
+  // для срабатывания анимации при доскроллинге до элемента
+  $(window).scroll(function() {
+    $('.no-animated').each(function () {
+        var elementPos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+        if (elementPos < topOfWindow + $(window).innerHeight()) {
+            $(this).removeClass("no-animated");
+        }
+    });
+  });
 });
