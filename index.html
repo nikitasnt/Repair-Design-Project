@@ -189,13 +189,13 @@
         <!-- /.control__video video -->
         <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
         <form action="#" class="form control__form">
-          <div class="control__input-group">
+          <div class="control__input-group input-group">
             <label for="user-name" class="label form__label control__label">Имя</label>
-            <input type="text" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
+            <input type="text" name="userName" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
           </div>
-          <div class="control__input-group">
+          <div class="control__input-group input-group">
             <label for="user-phone" class="label form__label control__label">Телефон</label>
-            <input type="tel" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <input type="tel" name="userPhone" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
           </div>
           <button class="button button_primary control__button">Отправить</button>
           <div class="policy control__policy">
@@ -459,15 +459,15 @@
         <form action="#" class="form footer__form">
           <div class="input-group footer__input-group">
             <label for="user-name" class="label form__label label_light">Имя</label>
-            <input type="text" class="input form__input footer__input input_light" id="user-name" placeholder="Как вас зовут:">
+            <input type="text" name="userName" class="input form__input footer__input input_light" id="user-name" placeholder="Как вас зовут:">
           </div>
           <div class="input-group footer__input-group">
             <label for="user-phone" class="label form__label label_light">Телефон</label>
-            <input type="tel" class="input form__input footer__input input_light" id="user-phone" placeholder="Ваш номер телефона:">
+            <input type="tel" name="userPhone" class="input form__input footer__input input_light" id="user-phone" placeholder="Ваш номер телефона:">
           </div>
-          <div class="input-group footer__input-group footer__input-group_full-width">
+          <div class="input-group footer__input-group">
             <label for="user-question" class="label form__label label_light">Вопрос</label>
-            <input type="text" class="input form__input footer__input input_light" id="user-question" placeholder="Я хочу спросить:">
+            <input type="text" name="userQuestion" class="input form__input footer__input input_light" id="user-question" placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
             <input type="checkbox" name="policy-checkbox" id="policy-checkbox-2" class="policy__checkbox" checked>
@@ -510,12 +510,18 @@
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="#" class="form modal__form">
-        <label for="user-name" class="label form__label label_light">Имя</label>
-        <input type="text" class="input form__input modal__input input_light" id="user-name" placeholder="Как вас зовут:">
-        <label for="user-phone" class="label form__label label_light">Телефон</label>
-        <input type="tel" class="input form__input modal__input input_light" id="user-phone" placeholder="Ваш номер телефона:">
-        <label for="user-email" class="label form__label label_light">Email</label>
-        <input type="email" class="input form__input modal__input input_light" id="user-email" placeholder="Ваш email">
+        <div class="input-group modal__input-group">
+          <label for="user-name" class="label form__label label_light">Имя</label>
+          <input type="text" name="userName" class="input form__input modal__input input_light" id="user-name" placeholder="Как вас зовут:">
+        </div>
+        <div class="input-group modal__input-group">
+          <label for="user-phone" class="label form__label label_light">Телефон</label>
+          <input type="tel" name="userPhone" class="input form__input modal__input input_light" id="user-phone" placeholder="Ваш номер телефона:">
+        </div>
+        <div class="input-group modal__input-group">
+          <label for="user-email" class="label form__label label_light">Email</label>
+          <input type="email" name="userEmail" class="input form__input modal__input input_light" id="user-email" placeholder="Ваш email">
+        </div>
         <div class="policy modal__policy">
           <input type="checkbox" name="policy-checkbox" id="policy-checkbox-1" class="policy__checkbox" checked>
           <label for="policy-checkbox-1" class="policy__label">Я соглашаюсь с обработкой данных</label>
@@ -536,6 +542,8 @@
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

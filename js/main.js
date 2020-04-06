@@ -94,4 +94,103 @@ $(document).ready(function () {
         }
     });
   });
+
+
+
+  // форма модального окна
+  $('.modal__form').validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // правило-объект (блок)
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    // сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя должно быть длиннее 2 букв",
+        maxlength: "Имя должно быть не длиннее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Email обязателен",
+        email: "Email должен быть формате \"name@domain.com\""
+      }
+    }
+  });
+
+  // форма секции онлайн помощь
+  $('.control__form').validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required"
+    },
+    // сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя должно быть длиннее 2 букв",
+        maxlength: "Имя должно быть не длиннее 15 букв"
+      },
+      userPhone: "Телефон обязателен"
+    }
+  });
+
+  // форма подвала
+  $('.footer__form').validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      userQuestion: {
+        required: true,
+        minlength: 15,
+        maxlength: 60
+      }
+    },
+    // сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя должно быть длиннее 2 букв",
+        maxlength: "Имя должно быть не длиннее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+      userQuestion: {
+        required: "Вопрос обязателен",
+        minlength: "Минимальная длина вопроса длиннее 15 символов",
+        maxlength: "Максимальная длина вопроса не длиннее 60 символов"
+      }
+    }
+  });
+
+
+
+  // маска для номера телефона
+  $('[type=tel').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
 });
