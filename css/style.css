@@ -1357,7 +1357,7 @@ img {
 }
 
 .design-project {
-  padding-bottom: 30rem;
+  margin-bottom: -35rem;
 }
 
 .design-project__section-title {
@@ -1372,7 +1372,115 @@ img {
   display: none;
 }
 
+.steps {
+  padding-top: 70rem;
+}
+
+.team {
+  margin-top: -35rem;
+}
+
+.team__section-title {
+  color: #ffffff;
+}
+
+.team__first-description {
+  max-width: 32rem;
+  margin-bottom: 5.8rem;
+}
+
+.team__badge {
+  position: absolute;
+  background-color: #E3B873;
+  width: 5rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
+          box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
+  z-index: 1;
+  margin-top: -2.5rem;
+  margin-left: -9.7rem;
+}
+
+.team__title {
+  margin-top: 1.57rem;
+  color: #131313;
+  font-size: 1.286rem;
+}
+
+.team__subtitle {
+  color: #959595;
+  margin-top: 0;
+  font-size: 1.286rem;
+  margin-bottom: 2.8rem;
+}
+
+.team__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team__text {
+  margin-top: -5.7rem;
+  width: 16.643rem;
+  padding: 0 1.64rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.team__tag {
+  font-size: 0.93rem;
+  padding: 1.014rem 2.6rem;
+  width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.team__second-description {
+  color: #131313;
+  max-width: 40.57rem;
+  font-size: 1.428rem;
+  text-align: center;
+  margin: auto;
+  line-height: 2.428rem;
+}
+
+.team__second-description::before {
+  content: '';
+  display: block;
+  margin: auto;
+  margin-top: 5.6rem;
+  margin-bottom: 0.6rem;
+  width: 55px;
+  height: 2px;
+  background-color: #E3B873;
+  border-radius: 30px;
+}
+
 .footer {
+  margin-top: 50rem;
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem;
 }
@@ -1582,6 +1690,19 @@ img {
   .swiper-slide__text_margin-left {
     margin-left: auto;
   }
+  .team__badge {
+    margin-top: -2.5rem;
+    margin-left: -11.4rem;
+  }
+}
+
+@media screen and (max-width: 1065px) {
+  .team__badge {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    margin-left: -2.5rem;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1620,6 +1741,48 @@ img {
   }
   .col-40_mobile, .col-60_mobile {
     width: 100%;
+  }
+  .team {
+    background-color: #131313;
+  }
+  .team__heading {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .team__first-description {
+    font-size: 1.1rem;
+    max-width: 25.2rem;
+    margin-bottom: 5.5rem;
+  }
+  .team__card {
+    margin-bottom: 9.1rem;
+  }
+  .team__badge {
+    width: 5.9rem;
+    height: 5.9rem;
+    margin-left: -2.8rem;
+    margin-top: -2.8rem;
+  }
+  .team__title {
+    font-size: 1.5rem;
+    margin-top: 1.67rem;
+  }
+  .team__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 3.9rem;
+  }
+  .team__tag {
+    font-size: 1.1rem;
+    padding: 1.214rem 2.6rem;
+  }
+  .team__text {
+    width: 19.4rem;
+    margin-top: -6.6rem;
+    margin-left: auto;
+  }
+  .team__second-description {
+    color: #ffffff;
+    margin-top: -8.5rem;
   }
 }
 
@@ -1765,6 +1928,7 @@ img {
   }
   .footer {
     background-image: none;
+    margin-top: -10.3rem;
   }
   .footer__input-group {
     margin-bottom: 5.5rem;
@@ -1804,6 +1968,25 @@ img {
   .footer__menu {
     display: none;
   }
+  .team__card {
+    margin-bottom: 8rem;
+  }
+  .team__first-description {
+    max-width: 25.2rem;
+    margin-bottom: 5.6rem;
+  }
+  .team__text {
+    margin-top: -6.8rem;
+  }
+  .team__badge {
+    -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+    margin-left: -11.4rem;
+  }
+  .team__second-description {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 350px) {
@@ -1812,6 +1995,12 @@ img {
   }
   .control__text {
     width: auto;
+  }
+  .team__badge {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    margin-left: auto;
   }
 }
 

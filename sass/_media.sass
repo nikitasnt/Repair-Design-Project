@@ -10,6 +10,15 @@
       &__text
         &_margin-left
           margin-left: auto
+  .team
+    &__badge
+      margin-top: -2.5rem
+      margin-left: -11.4rem
+@media screen and ( max-width: 1065px )
+  .team
+    &__badge
+      align-self: start
+      margin-left: -2.5rem
 @media screen and ( max-width: 992px )
   .navbar
     display: none
@@ -36,6 +45,38 @@
   .col-40, .col-60
     &_mobile
       width: 100%
+  .team
+    background-color: $dark
+    &__heading
+      font-size: 1.8rem
+      margin-bottom: 1.2rem
+    &__first-description
+      font-size: 1.1rem
+      max-width: 25.2rem
+      margin-bottom: 5.5rem
+    &__card
+      margin-bottom: 9.1rem
+    &__badge
+      width: 5.9rem
+      height: 5.9rem
+      margin-left: -2.8rem
+      margin-top: -2.8rem
+    &__title
+      font-size: 1.5rem
+      margin-top: 1.67rem
+    &__subtitle
+      font-size: 1.5rem
+      margin-bottom: 3.9rem
+    &__tag
+      font-size: 1.1rem
+      padding: 1.214rem 2.6rem
+    &__text
+      width: 19.4rem
+      margin-top: -6.6rem
+      margin-left: auto
+    &__second-description
+      color: $light
+      margin-top: -8.5rem
 @media screen and ( max-width: 570px )
   .contacts
     &__phone
@@ -138,6 +179,7 @@
       height: 65px
   .footer
     background-image: none
+    margin-top: -10.3rem
     &__input-group
       margin-bottom: 5.5rem
     &__title
@@ -164,12 +206,29 @@
       border-radius: 0
     &__menu
       display: none
+  .team
+    &__card
+      margin-bottom: 8rem
+    &__first-description
+      max-width: 25.2rem
+      margin-bottom: 5.6rem
+    &__text
+      margin-top: -6.8rem
+    &__badge
+      align-self: auto
+      margin-left: -11.4rem
+    &__second-description
+      display: none
 @media screen and ( max-width: 350px )
   .card
     width: auto
   .control
     &__text
       width: auto
+  .team
+    &__badge
+      align-self: start
+      margin-left: auto
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
