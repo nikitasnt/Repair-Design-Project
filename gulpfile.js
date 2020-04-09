@@ -2,8 +2,10 @@ const {src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const cssmin = require('gulp-cssmin');
+const rename = require('gulp-rename');
 
-// Static server
+// автообновляемый сервер
 function bs() {
   serveSass();
   browserSync.init({
@@ -17,7 +19,7 @@ function bs() {
   watch("./js/*.js").on('change', browserSync.reload);
 };
 
-// sass
+// компилятор sass и scss
 function serveSass() {
   return src("./sass/**/*.sass", "./sass/**/*.scss")
     .pipe(sass())
@@ -28,6 +30,16 @@ function serveSass() {
     .pipe(browserSync.stream());
 };
 
-exports.serve = bs;
+// минификация файла style.css
+function minCss(done) {
+  src('./css/**/*.css')
+      .pipe(cssmin())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(dest('./css'));
+      done();
+};
 
-// "gulp serve"
+exports.serve = bs;
+exports.minCss = minCss;
+
+// "gulp serve" - прописывать в терминал для запуска
