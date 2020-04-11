@@ -6,7 +6,7 @@ $userPhone = $_POST['userPhone'];
 // Load Composer's autoloader
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
+require 'phpmailer/Exception.php'; 
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer\PHPMailer\PHPMailer();

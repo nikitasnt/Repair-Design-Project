@@ -1,3 +1,11 @@
+@media screen and ( max-width: 1386px )
+  .clients
+    &__card
+      min-height: 35rem !important
+@media screen and ( max-width: 1295px )
+  .clients
+    &__card
+      min-height: 40rem !important
 @media screen and ( max-width: 1243px )
   .navbar
     &__item
@@ -27,6 +35,13 @@
       display: none
     &__content
       margin-left: 0
+  .clients
+    &__card
+      min-height: 50rem !important
+    &__icon
+      width: 1.4rem
+    &__value
+      font-size: 0.8rem
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
@@ -77,6 +92,8 @@
     &__second-description
       color: $light
       margin-top: -8.5rem
+  .clients
+    display: none
 @media screen and ( max-width: 570px )
   .contacts
     &__phone
