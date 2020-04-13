@@ -22,6 +22,13 @@
     &__badge
       margin-top: -2.5rem
       margin-left: -11.4rem
+@media screen and ( max-width: 1070px )
+  .steps
+    &__word
+      &::after
+        margin-left: 2rem
+  .swiper-pagination-3, .swiper-button-prev-3, .swiper-button-next-3
+    display: none
 @media screen and ( max-width: 1065px )
   .team
     &__badge
@@ -42,6 +49,10 @@
       width: 1.4rem
     &__value
       font-size: 0.8rem
+  .steps
+    &__word
+      &::after
+        display: none
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
@@ -99,6 +110,8 @@
       text-align: center
     &__link
       margin-top: 1rem
+  .steps
+    display: none
 @media screen and ( max-width: 570px )
   .contacts
     &__phone

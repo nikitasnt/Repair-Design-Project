@@ -1,5 +1,14 @@
 .projects
   padding-bottom: 29rem
+  &__word
+    display: flex
+    align-items: center
+    &::after
+      content: ''
+      width: 90px
+      height: 1px
+      background-color: $primary
+      margin-left: 2rem
 .project
   &__text
     margin-bottom: 2.4rem
@@ -7,7 +16,7 @@
     margin-left: auto
     margin-top: 1.7rem
 .swiper
-  &-slide
+  &-slide-1
     display: flex
     flex-wrap: wrap
     &__text
