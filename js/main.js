@@ -97,6 +97,26 @@ $(document).ready(function () {
 
 
 
+  // модальное окно благадарности после отправки формы
+  var modalSuccess = $('.modal-success'),
+      modalSuccessCloseBtn = $('.modal-success__close');
+  modalSuccessCloseBtn.on('click', function () {
+    modalSuccess.removeClass('modal-success_visible');
+  });
+  $(window).on('keyup', function(e) {
+    if (e.keyCode == 27) {
+      modalSuccess.removeClass('modal-success_visible');
+    }
+  });
+  modalSuccess.on('click', function(e){
+    if ($(e.target).removeClass('modal-success_visible')) {
+        // клик внутри элемента 
+        return;
+    }
+  });
+
+
+
   // форма модального окна
   $('.modal__form').validate({
     errorElement: "div",
@@ -127,10 +147,25 @@ $(document).ready(function () {
         required: "Email обязателен",
         email: "Email должен быть формате \"name@domain.com\""
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "modal.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal_visible');
+          modalSuccess.addClass('modal-success_visible');
+        },
+        error: function (response) {
+          console.error("Ошибка запроса: " + response);
+        }
+      });
     }
   });
 
-  // форма секции онлайн помощь
+  // форма секции онлайн контроль
   $('.control__form').validate({
     errorElement: "div",
     errorClass: "invalid",
@@ -151,6 +186,21 @@ $(document).ready(function () {
         maxlength: "Имя должно быть не длиннее 15 букв"
       },
       userPhone: "Телефон обязателен"
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "control-form.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal_visible');
+          modalSuccess.addClass('modal-success_visible');
+        },
+        error: function (response) {
+          console.error("Ошибка запроса: " + response);
+        }
+      });
     }
   });
 
@@ -185,6 +235,21 @@ $(document).ready(function () {
         minlength: "Минимальная длина вопроса длиннее 15 символов",
         maxlength: "Максимальная длина вопроса не длиннее 60 символов"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "footer.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal_visible');
+          modalSuccess.addClass('modal-success_visible');
+        },
+        error: function (response) {
+          console.error("Ошибка запроса: " + response);
+        }
+      });
     }
   });
 

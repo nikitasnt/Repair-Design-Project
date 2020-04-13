@@ -1,8 +1,8 @@
-.modal
+.modal-success
   opacity: 0
   visibility: hidden
   position: fixed
-  z-index: 199
+  z-index: 200
   left: 0
   top: 0
   right: 0
@@ -22,7 +22,11 @@
     max-width: 36.36rem
     background: $dark url('../img/bg-lines.svg') no-repeat center
     padding: 2.357rem 3.5rem 1.928rem
+    padding-bottom: 2.8rem
     color: $light
+    display: flex
+    flex-direction: column
+    align-items: center
   &__close
     position: absolute
     top: 0
@@ -35,25 +39,32 @@
     cursor: pointer
   &__title
     font-family: 'Yeseva One', cursive
-    font-size: 1.357rem
-    text-align: center
     font-weight: normal
-    margin: 0
-    margin-bottom: 1.9rem
-    line-height: 1.857rem
-  &__form
-    display: flex
-    flex-direction: column
-  &__input
-    &-group
-      display: flex
-      flex-direction: column
-      margin-bottom: 3.26rem
-    &:last-of-type
-      margin-bottom: 0
-  &__policy
-    margin-bottom: 3rem
-  &__button
-    align-self: flex-end
-    font-size: 0.93rem
-    padding: 1.29rem 3.6rem
+    font-size: 1.7rem
+    line-height: 2.4rem
+    text-transform: uppercase
+    text-align: center
+    &_word
+      color: $primary
+  &__text
+    font-size: 1.3rem
+    text-align: center
+  &__recommendation
+    max-width: 28rem
+    &_word
+      color: $primary
+  &__link
+    display: flex !important
+    align-items: center
+    justify-content: center
+    float: left
+    border-radius: 50%
+    display: inline-block
+    width: 5rem
+    height: 5rem
+    background-color: $primary
+    float: right
+  &__icon
+    width: 60%
+  &__row
+    margin-top: 1rem
