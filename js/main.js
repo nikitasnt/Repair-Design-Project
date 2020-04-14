@@ -274,7 +274,8 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      policyCheckbox: "required"
     },
     // сообщения
     messages: {
@@ -287,7 +288,15 @@ $(document).ready(function () {
       userEmail: {
         required: "Email обязателен",
         email: "Email должен быть формате \"name@domain.com\""
+      },
+      policyCheckbox: "Соглашение обязательно"
+    },
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
       }
+  
+       error.insertAfter($(element));
     },
     submitHandler: function(form) {
       $.ajax({
@@ -317,7 +326,8 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required"
+      userPhone: "required",
+      policyCheckbox: "required"
     },
     // сообщения
     messages: {
@@ -326,7 +336,15 @@ $(document).ready(function () {
         minlength: "Имя должно быть длиннее 2 букв",
         maxlength: "Имя должно быть не длиннее 15 букв"
       },
-      userPhone: "Телефон обязателен"
+      userPhone: "Телефон обязателен",
+      policyCheckbox: "Соглашение обязательно"
+    },
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
     },
     submitHandler: function(form) {
       $.ajax({
@@ -361,7 +379,8 @@ $(document).ready(function () {
         required: true,
         minlength: 15,
         maxlength: 60
-      }
+      },
+      policyCheckbox: "required"
     },
     // сообщения
     messages: {
@@ -375,7 +394,15 @@ $(document).ready(function () {
         required: "Вопрос обязателен",
         minlength: "Минимальная длина вопроса длиннее 15 символов",
         maxlength: "Максимальная длина вопроса не длиннее 60 символов"
+      },
+      policyCheckbox: "Соглашение обязательно"
+    },
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
       }
+  
+       error.insertAfter($(element));
     },
     submitHandler: function(form) {
       $.ajax({

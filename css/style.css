@@ -654,7 +654,6 @@ template {
 div.invalid {
   position: absolute;
   color: red;
-  left: 0;
   bottom: -1.43rem;
 }
 
@@ -662,7 +661,7 @@ input.invalid {
   border-bottom: 1px solid red;
 }
 
-.input-group {
+.input-group, .policy {
   position: relative;
 }
 
@@ -2515,6 +2514,9 @@ img {
   }
   .team__second-description {
     display: none;
+  }
+  div.invalid {
+    left: 0;
   }
 }
 
