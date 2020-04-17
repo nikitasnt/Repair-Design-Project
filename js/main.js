@@ -81,8 +81,192 @@ $(document).ready(function () {
   bullets1.css('left', prev1.width() + 25);
 
 
-
+  
   // второй слайдер
+  var mySwiper2 = new Swiper ('.swiper-container-2', {
+    loop: true,
+    direction: 'vertical'
+  });
+
+  // мобильный второй слайдер
+  var mySwiper2mobile = new Swiper ('.swiper-container-2_mobile', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next-2_mobile',
+      prevEl: '.swiper-button-prev-2_mobile',
+    }
+  });
+
+  // для работы перелистывания слайдов но нажатию на элементы списка
+  $('#fantasies-link-1').on('click', function () {
+    mySwiper2[0].slideToLoop(0);
+    mySwiper2[1].slideToLoop(0);
+    $('#fantasies-link-1').addClass('fantasies__words_active');
+    $('#fantasies-link-2').removeClass('fantasies__words_active');
+    $('#fantasies-link-3').removeClass('fantasies__words_active');
+    $('#fantasies-link-4').removeClass('fantasies__words_active');
+    $('#fantasies-link-5').removeClass('fantasies__words_active');
+    $('#fantasies-link-6').removeClass('fantasies__words_active');
+    $('#fantasies-link-7').removeClass('fantasies__words_active');
+    $('#fantasies-link-8').removeClass('fantasies__words_active');
+    $('#fantasies-link-9').removeClass('fantasies__words_active');
+    $('#fantasies-link-10').removeClass('fantasies__words_active');
+    $('#fantasies-link-11').removeClass('fantasies__words_active');
+  });
+  $('#fantasies-link-2').on('click', function () {
+    mySwiper2[0].slideToLoop(1);
+    mySwiper2[1].slideToLoop(1);
+    $('#fantasies-link-2').addClass(' fantasies__words_active');
+    $('#fantasies-link-1').removeClass('fantasies__words_active');
+    $('#fantasies-link-3').removeClass('fantasies__words_active');
+    $('#fantasies-link-4').removeClass('fantasies__words_active');
+    $('#fantasies-link-5').removeClass('fantasies__words_active');
+    $('#fantasies-link-6').removeClass('fantasies__words_active');
+    $('#fantasies-link-7').removeClass('fantasies__words_active');
+    $('#fantasies-link-8').removeClass('fantasies__words_active');
+    $('#fantasies-link-9').removeClass('fantasies__words_active');
+    $('#fantasies-link-10').removeClass('fantasies__words_active');
+    $('#fantasies-link-11').removeClass('fantasies__words_active');
+  });
+  $('#fantasies-link-3').on('click', function () {
+    mySwiper2[0].slideToLoop(2);
+    mySwiper2[1].slideToLoop(2);
+    $('#fantasies-link-3').addClass(' fantasies__words_active');
+    $('#fantasies-link-1').removeClass('fantasies__words_active');
+    $('#fantasies-link-2').removeClass('fantasies__words_active');
+    $('#fantasies-link-4').removeClass('fantasies__words_active');
+    $('#fantasies-link-5').removeClass('fantasies__words_active');
+    $('#fantasies-link-6').removeClass('fantasies__words_active');
+    $('#fantasies-link-7').removeClass('fantasies__words_active');
+    $('#fantasies-link-8').removeClass('fantasies__words_active');
+    $('#fantasies-link-9').removeClass('fantasies__words_active');
+    $('#fantasies-link-10').removeClass('fantasies__words_active');
+    $('#fantasies-link-11').removeClass('fantasies__words_active');
+  });
+  $('#fantasies-link-4').on('click', function () {
+    mySwiper2[0].slideToLoop(3);
+    mySwiper2[1].slideToLoop(3);
+    $('#fantasies-link-4').addClass(' fantasies__words_active');
+    $('#fantasies-link-1').removeClass('fantasies__words_active');
+    $('#fantasies-link-2').removeClass('fantasies__words_active');
+    $('#fantasies-link-3').removeClass('fantasies__words_active');
+    $('#fantasies-link-5').removeClass('fantasies__words_active');
+    $('#fantasies-link-6').removeClass('fantasies__words_active');
+    $('#fantasies-link-7').removeClass('fantasies__words_active');
+    $('#fantasies-link-8').removeClass('fantasies__words_active');
+    $('#fantasies-link-9').removeClass('fantasies__words_active');
+    $('#fantasies-link-10').removeClass('fantasies__words_active');
+    $('#fantasies-link-11').removeClass('fantasies__words_active');
+  });
+  $('#fantasies-link-5').on('click', function () {
+    mySwiper2[0].slideToLoop(4);
+    mySwiper2[1].slideToLoop(4);
+    $('#fantasies-link-5').addClass(' fantasies__words_active');
+    $('#fantasies-link-1').removeClass('fantasies__words_active');
+    $('#fantasies-link-2').removeClass('fantasies__words_active');
+    $('#fantasies-link-3').removeClass('fantasies__words_active');
+    $('#fantasies-link-4').removeClass('fantasies__words_active');
+    $('#fantasies-link-6').removeClass('fantasies__words_active');
+    $('#fantasies-link-7').removeClass('fantasies__words_active');
+    $('#fantasies-link-8').removeClass('fantasies__words_active');
+    $('#fantasies-link-9').removeClass('fantasies__words_active');
+    $('#fantasies-link-10').removeClass('fantasies__words_active');
+    $('#fantasies-link-11').removeClass('fantasies__words_active');
+  });
+  $('#fantasies-link-6').on('click', function () {
+    mySwiper2[0].slideToLoop(5);
+    mySwiper2[1].slideToLoop(5);
+    $('#fantasies-link-6').addClass(' fantasies__words_active');
+    $('#fantasies-link-1').removeClass('fantasies__words_active');
+    $('#fantasies-link-2').removeClass('fantasies__words_active');
+    $('#fantasies-link-3').removeClass('fantasies__words_active');
+    $('#fantasies-link-4').removeClass('fantasies__words_active');
+    $('#fantasies-link-5').removeClass('fantasies__words_active');
+    $('#fantasies-link-7').removeClass('fantasies__words_active');
+    $('#fantasies-link-8').removeClass('fantasies__words_active');
+    $('#fantasies-link-9').removeClass('fantasies__words_active');
+    $('#fantasies-link-10').removeClass('fantasies__words_active');
+    $('#fantasies-link-11').removeClass('fantasies__words_active');
+  });
+  $('#fantasies-link-7').on('click', function () {
+    mySwiper2[0].slideToLoop(6);
+    mySwiper2[1].slideToLoop(6);
+    $('#fantasies-link-7').addClass(' fantasies__words_active');
+    $('#fantasies-link-1').removeClass('fantasies__words_active');
+    $('#fantasies-link-2').removeClass('fantasies__words_active');
+    $('#fantasies-link-3').removeClass('fantasies__words_active');
+    $('#fantasies-link-4').removeClass('fantasies__words_active');
+    $('#fantasies-link-5').removeClass('fantasies__words_active');
+    $('#fantasies-link-6').removeClass('fantasies__words_active');
+    $('#fantasies-link-8').removeClass('fantasies__words_active');
+    $('#fantasies-link-9').removeClass('fantasies__words_active');
+    $('#fantasies-link-10').removeClass('fantasies__words_active');
+    $('#fantasies-link-11').removeClass('fantasies__words_active');
+  });
+  $('#fantasies-link-8').on('click', function () {
+    mySwiper2[0].slideToLoop(7);
+    mySwiper2[1].slideToLoop(7);
+    $('#fantasies-link-8').addClass(' fantasies__words_active');
+    $('#fantasies-link-1').removeClass('fantasies__words_active');
+    $('#fantasies-link-2').removeClass('fantasies__words_active');
+    $('#fantasies-link-3').removeClass('fantasies__words_active');
+    $('#fantasies-link-4').removeClass('fantasies__words_active');
+    $('#fantasies-link-5').removeClass('fantasies__words_active');
+    $('#fantasies-link-6').removeClass('fantasies__words_active');
+    $('#fantasies-link-7').removeClass('fantasies__words_active');
+    $('#fantasies-link-9').removeClass('fantasies__words_active');
+    $('#fantasies-link-10').removeClass('fantasies__words_active');
+    $('#fantasies-link-11').removeClass('fantasies__words_active');
+  });
+  $('#fantasies-link-9').on('click', function () {
+    mySwiper2[0].slideToLoop(8);
+    mySwiper2[1].slideToLoop(8);
+    $('#fantasies-link-9').addClass(' fantasies__words_active');
+    $('#fantasies-link-1').removeClass('fantasies__words_active');
+    $('#fantasies-link-2').removeClass('fantasies__words_active');
+    $('#fantasies-link-3').removeClass('fantasies__words_active');
+    $('#fantasies-link-4').removeClass('fantasies__words_active');
+    $('#fantasies-link-5').removeClass('fantasies__words_active');
+    $('#fantasies-link-6').removeClass('fantasies__words_active');
+    $('#fantasies-link-7').removeClass('fantasies__words_active');
+    $('#fantasies-link-8').removeClass('fantasies__words_active');
+    $('#fantasies-link-10').removeClass('fantasies__words_active');
+    $('#fantasies-link-11').removeClass('fantasies__words_active');
+  });
+  $('#fantasies-link-10').on('click', function () {
+    mySwiper2[0].slideToLoop(9);
+    mySwiper2[1].slideToLoop(9);
+    $('#fantasies-link-10').addClass(' fantasies__words_active');
+    $('#fantasies-link-1').removeClass('fantasies__words_active');
+    $('#fantasies-link-2').removeClass('fantasies__words_active');
+    $('#fantasies-link-3').removeClass('fantasies__words_active');
+    $('#fantasies-link-4').removeClass('fantasies__words_active');
+    $('#fantasies-link-5').removeClass('fantasies__words_active');
+    $('#fantasies-link-6').removeClass('fantasies__words_active');
+    $('#fantasies-link-7').removeClass('fantasies__words_active');
+    $('#fantasies-link-8').removeClass('fantasies__words_active');
+    $('#fantasies-link-9').removeClass('fantasies__words_active');
+    $('#fantasies-link-11').removeClass('fantasies__words_active');
+  });
+  $('#fantasies-link-11').on('click', function () {
+    mySwiper2[0].slideToLoop(10);
+    mySwiper2[1].slideToLoop(10);
+    $('#fantasies-link-11').addClass(' fantasies__words_active');
+    $('#fantasies-link-1').removeClass('fantasies__words_active');
+    $('#fantasies-link-2').removeClass('fantasies__words_active');
+    $('#fantasies-link-3').removeClass('fantasies__words_active');
+    $('#fantasies-link-4').removeClass('fantasies__words_active');
+    $('#fantasies-link-5').removeClass('fantasies__words_active');
+    $('#fantasies-link-6').removeClass('fantasies__words_active');
+    $('#fantasies-link-7').removeClass('fantasies__words_active');
+    $('#fantasies-link-8').removeClass('fantasies__words_active');
+    $('#fantasies-link-9').removeClass('fantasies__words_active');
+    $('#fantasies-link-10').removeClass('fantasies__words_active');
+  });
+
+
+
+  // третий слайдер
   var mySwiper3 = new Swiper ('.swiper-container-3', {
     loop: true,
     pagination: {

@@ -1171,7 +1171,7 @@ img {
   background-color: #ffffff;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-default-prev, .swiper-button-default-next {
   bottom: 0;
   top: auto;
   background-size: 42px;
@@ -1179,16 +1179,16 @@ img {
   height: 14px;
 }
 
-.swiper-button-prev::after, .swiper-button-next::after {
+.swiper-button-default-prev::after, .swiper-button-default-next::after {
   display: none;
 }
 
-.swiper-button-prev {
+.swiper-button-default-prev {
   left: 0;
   background: url("../img/arrow-prev.svg") no-repeat center;
 }
 
-.swiper-button-next {
+.swiper-button-default-next {
   background: url("../img/arrow-next.svg") no-repeat center;
 }
 
@@ -1366,6 +1366,146 @@ img {
   padding: 1.214rem 2.6rem;
   -webkit-box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
           box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+}
+
+.fantasies {
+  margin-top: 10rem;
+  position: relative;
+  background: url("../img/fantasies-bg.jpg") no-repeat center/cover;
+  height: 61.7143rem;
+}
+
+.fantasies::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.85);
+}
+
+.fantasies__row {
+  position: relative;
+}
+
+.fantasies__col {
+  margin-right: -4.4rem;
+}
+
+.fantasies__slide-col_first {
+  margin-top: -7.1rem;
+}
+
+.fantasies__slide-col_second {
+  margin-top: -12.2rem;
+}
+
+.fantasies__image-1 {
+  margin-bottom: 2.5rem;
+}
+
+.fantasies__image-3 {
+  margin-bottom: 2.3rem;
+}
+
+.fantasies__title {
+  font-family: 'Yeseva One', cursive;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #E3B873;
+  font-size: 1.93rem;
+  line-height: 2.643rem;
+  max-width: 29.357rem;
+  margin-top: 5.4rem;
+  margin-bottom: 2.9rem;
+}
+
+.fantasies__list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.fantasies__list-element {
+  font-family: 'Futura Book', sans-serif;
+  font-size: 1.7rem;
+  margin-bottom: 1.6rem;
+  cursor: default;
+}
+
+.fantasies__words {
+  position: relative;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.fantasies__words::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: #E3B873;
+  width: 0;
+  -webkit-transition: width 200ms ease-in-out;
+  transition: width 200ms ease-in-out;
+}
+
+.fantasies__words_active {
+  color: #E3B873;
+}
+
+.fantasies__words_active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: #E3B873;
+  width: 62%;
+}
+
+.fantasies__words:hover {
+  color: #E3B873;
+  cursor: pointer;
+}
+
+.fantasies__words:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: #E3B873;
+  width: 62%;
+}
+
+.fantasies__mobile-image {
+  display: block;
+  margin: auto;
+}
+
+.swiper-container-2 {
+  height: 67.5rem;
+}
+
+.swiper-container-2_mobile {
+  display: none;
+}
+
+.swiper-button-prev-2_mobile, .swiper-button-next-2_mobile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.swiper-button-prev-2_mobile::after, .swiper-button-next-2_mobile::after {
+  display: none;
+}
+
+.swiper-button-prev-2_mobile {
+  background: url("../img/fantasies/button-left.svg") no-repeat center;
+}
+
+.swiper-button-next-2_mobile {
+  background: url("../img/fantasies/button-right.svg") no-repeat center;
 }
 
 .design-project {
@@ -2147,6 +2287,16 @@ img {
   .clients__card {
     min-height: 40rem !important;
   }
+  .fantasies__title {
+    max-width: 18rem;
+    margin-top: -2rem;
+  }
+  .fantasies__slide-col_first {
+    margin-top: -3rem;
+  }
+  .fantasies__slide-col_second {
+    margin-top: -6rem;
+  }
 }
 
 @media screen and (max-width: 1243px) {
@@ -2208,6 +2358,12 @@ img {
   .steps__word::after {
     display: none;
   }
+  .fantasies__slide-col_first {
+    margin-top: 2rem;
+  }
+  .fantasies__slide-col_second {
+    margin-top: 0rem;
+  }
 }
 
 @media screen and (max-width: 760px) {
@@ -2231,6 +2387,7 @@ img {
   }
   .design-project {
     background: #131313;
+    padding-top: 13.1rem;
   }
   .col-40_mobile, .col-60_mobile {
     width: 100%;
@@ -2288,6 +2445,33 @@ img {
   }
   .steps {
     display: none;
+  }
+  .fantasies {
+    background-image: none;
+    margin-bottom: -38.6rem;
+  }
+  .fantasies::before {
+    display: none;
+  }
+  .fantasies__title {
+    margin: auto;
+    text-align: center;
+    max-width: 29.4rem;
+    font-size: 1.7rem;
+    margin-bottom: 2.6rem;
+  }
+  .fantasies__list {
+    display: none;
+  }
+  .fantasies__col {
+    width: 100%;
+    margin-right: auto;
+  }
+  .fantasies__slide-col_first, .fantasies__slide-col_second {
+    display: none;
+  }
+  .swiper-container-2_mobile {
+    display: block;
   }
 }
 
@@ -2520,6 +2704,18 @@ img {
   }
 }
 
+@media screen and (max-width: 380px) {
+  .fantasies__mobile-image {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 357px) {
+  .fantasies__title {
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (max-width: 350px) {
   .card {
     width: auto;
@@ -2532,6 +2728,12 @@ img {
         -ms-grid-row-align: start;
         align-self: start;
     margin-left: auto;
+  }
+  .fantasies {
+    margin-bottom: -40.6rem;
+  }
+  .fantasies__mobile-image {
+    height: auto;
   }
 }
 
