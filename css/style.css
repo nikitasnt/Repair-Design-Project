@@ -1322,6 +1322,7 @@ img {
 .video__play {
   position: relative;
   margin: auto;
+  cursor: pointer;
 }
 
 .types__section-title {
