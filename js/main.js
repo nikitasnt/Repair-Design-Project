@@ -453,7 +453,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 18
+      },
       // правило-объект (блок)
       userEmail: {
         required: true,
@@ -510,7 +513,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 18
+      },
       policyCheckbox: "required"
     },
     // сообщения
@@ -558,7 +564,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 18
+      },
       userQuestion: {
         required: true,
         minlength: 15,
@@ -605,10 +614,70 @@ $(document).ready(function () {
     }
   });
 
+  // форма секции вызова замерщика
+  $('.measure__form').validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        minlength: 18
+      },
+      // правило-объект (блок)
+      userEmail: {
+        required: true,
+        email: true
+      },
+      policyCheckbox: "required"
+    },
+    // сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя должно быть длиннее 2 букв",
+        maxlength: "Имя должно быть не длиннее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Email обязателен",
+        email: "Email должен быть формате \"name@domain.com\""
+      },
+      policyCheckbox: "Соглашение обязательно"
+    },
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+  
+       error.insertAfter($(element));
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "measure.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal_visible');
+          modalSuccess.addClass('modal-success_visible');
+        },
+        error: function (response) {
+          console.error("Ошибка запроса: " + response);
+        }
+      });
+    }
+  });
+
 
 
   // маска для номера телефона
-  $('[type=tel').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+  $('[type=tel').mask('+7 (000) 000-00-00', {placeholder: "+7 (000) 000-00-00"});
 
 
 

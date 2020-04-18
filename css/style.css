@@ -713,6 +713,10 @@ input.invalid {
   width: 30%;
 }
 
+.col-50 {
+  width: 50%;
+}
+
 .col-40 {
   width: 40%;
 }
@@ -1366,6 +1370,210 @@ img {
   padding: 1.214rem 2.6rem;
   -webkit-box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
           box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+}
+
+.measure__row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.measure__col_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 48.8rem;
+      flex-basis: 48.8rem;
+  height: 45.447rem;
+  background: url("../img/measure/bg-city.png") no-repeat -6.6rem -3.9rem, url("../img/measure/bg-circle.png") no-repeat -6.5rem;
+}
+
+.measure__col_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 36.143rem;
+      flex-basis: 36.143rem;
+  margin-bottom: -5.9rem;
+}
+
+.measure__article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.measure__article_first {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 4.5rem;
+}
+
+.measure__article_second {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 4.9rem;
+  margin-right: 10.8rem;
+}
+
+.measure__article_third {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 8.5rem;
+  margin-right: 5.6rem;
+}
+
+.measure__article_fourth {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 8.5rem;
+  margin-right: 5.6rem;
+}
+
+.measure__num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  width: 2.983rem;
+  height: 2.983rem;
+  color: #ffffff;
+  background-color: #E3B873;
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.286rem;
+  font-weight: normal;
+  margin-right: 1.07rem;
+}
+
+.measure__description {
+  font-size: 1.286rem;
+  line-height: 1.5rem;
+}
+
+.measure__description_first {
+  width: 26rem;
+}
+
+.measure__description_fourth {
+  width: 18.286rem;
+}
+
+.measure__dialog {
+  width: 100%;
+  background: #131313 url("../img/bg-lines.svg") no-repeat center;
+  padding: 2.357rem 3.5rem 1.928rem;
+  color: #ffffff;
+}
+
+.measure__title {
+  font-size: 1.43rem;
+  text-align: center;
+  font-weight: normal;
+  margin: 0 auto;
+  margin-top: -0.6rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.786rem;
+  max-width: 21.214rem;
+}
+
+.measure__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.measure__input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 3.26rem;
+}
+
+.measure__input-group_last {
+  margin-bottom: 0.1rem;
+}
+
+.measure__policy {
+  margin-bottom: 2.7rem;
+}
+
+.measure__button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 0.93rem;
+  padding: 1.3rem 3rem;
+  border-radius: 0;
+}
+
+.measure__sale {
+  margin-top: 2.7rem;
+  margin-right: 1.7rem;
+}
+
+.sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sale__tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #E3B873;
+  width: 5.143rem;
+  height: 5.143rem;
+  border-radius: 50%;
+  margin-right: 1.82rem;
+}
+
+.sale__icon {
+  width: 2.857rem;
+}
+
+.sale__description {
+  font-family: 'Futura Demi', sans-serif;
+  font-size: 1.43rem;
+  line-height: 1.786rem;
+  max-width: 22.7rem;
+  color: #E3B873;
 }
 
 .fantasies {
@@ -2281,6 +2489,9 @@ img {
   .clients__card {
     min-height: 35rem !important;
   }
+  .measure__col_left {
+    margin-left: -9rem;
+  }
 }
 
 @media screen and (max-width: 1295px) {
@@ -2316,6 +2527,48 @@ img {
     margin-top: -2.5rem;
     margin-left: -11.4rem;
   }
+  .measure__col_left {
+    height: 54rem;
+  }
+  .measure__article_first {
+    margin-right: -4.5rem;
+    margin-top: 6rem;
+  }
+  .measure__article_second {
+    margin-right: 5.2rem;
+    margin-top: 6.2rem;
+  }
+  .measure__article_third {
+    margin-right: -0.2rem;
+    margin-top: 10.4rem;
+  }
+  .measure__article_fourth {
+    margin-right: 0.6rem;
+    margin-top: 10.7rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .measure__description_first {
+    width: 19rem;
+  }
+  .measure__description_third {
+    width: 13rem;
+  }
+  .measure__description_fourth {
+    width: 14rem;
+  }
+  .measure__article_first {
+    margin-right: 2.3rem;
+    margin-top: 5.1rem;
+  }
+  .measure__article_second {
+    margin-top: 5.6rem;
+  }
+  .measure__article_fourth {
+    margin-right: 4.5rem;
+    margin-top: 9.6rem;
+  }
 }
 
 @media screen and (max-width: 1070px) {
@@ -2333,6 +2586,13 @@ img {
         -ms-grid-row-align: start;
         align-self: start;
     margin-left: -2.5rem;
+  }
+  .measure__col_right {
+    -ms-flex-preferred-size: 30.143rem;
+        flex-basis: 30.143rem;
+  }
+  .sale__tag {
+    height: 4.943rem;
   }
 }
 
@@ -2363,6 +2623,9 @@ img {
   }
   .fantasies__slide-col_second {
     margin-top: 0rem;
+  }
+  .measure {
+    display: none;
   }
 }
 

@@ -2,6 +2,10 @@
   .clients
     &__card
       min-height: 35rem !important
+  .measure
+    &__col
+      &_left
+        margin-left: -9rem
 @media screen and ( max-width: 1295px )
   .clients
     &__card
@@ -31,6 +35,41 @@
     &__badge
       margin-top: -2.5rem
       margin-left: -11.4rem
+  .measure
+    &__col
+      &_left
+        height: 54rem
+    &__article
+      &_first
+        margin-right: -4.5rem
+        margin-top: 6rem
+      &_second
+        margin-right: 5.2rem
+        margin-top: 6.2rem
+      &_third
+        margin-right: -0.2rem
+        margin-top: 10.4rem
+      &_fourth
+        margin-right: 0.6rem
+        margin-top: 10.7rem
+@media screen and ( max-width: 1100px )
+  .measure
+    &__description
+      &_first
+        width: 19rem
+      &_third
+        width: 13rem
+      &_fourth
+        width: 14rem
+    &__article
+      &_first
+        margin-right: 2.3rem
+        margin-top: 5.1rem
+      &_second
+        margin-top: 5.6rem
+      &_fourth
+        margin-right: 4.5rem
+        margin-top: 9.6rem
 @media screen and ( max-width: 1070px )
   .steps
     &__word
@@ -43,6 +82,13 @@
     &__badge
       align-self: start
       margin-left: -2.5rem
+  .measure
+    &__col
+      &_right
+        flex-basis: 30.143rem
+  .sale
+    &__tag
+      height: 4.943rem
 @media screen and ( max-width: 992px )
   .navbar
     display: none
@@ -68,6 +114,8 @@
         margin-top: 2rem
       &_second
         margin-top: 0rem
+  .measure
+    display: none
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
