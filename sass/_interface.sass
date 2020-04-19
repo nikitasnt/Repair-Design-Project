@@ -10,13 +10,22 @@
     background-color: $primary
     color: $light
     box-shadow: 0px 5px 15px rgba($primary, 0.2)
-    transition: box-shadow 0.3s
+    transition: 0.3s
+    border: 1px solid $primary
     &:hover
+      border: 1px solid $primary
       box-shadow: none
+      background: transparent
+      color: $primary !important
   &_outline
     border: 1px solid $light
     background-color: transparent
     color: $light
+    transition: 0.3s
+    &:hover
+      border: 1px solid $light
+      background-color: $light
+      color: $dark
 .label
   font-size: 1.07rem
   &_light

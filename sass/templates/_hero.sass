@@ -59,7 +59,7 @@
       animation-duration: 3.3s
       animation-timing-function: ease
     &_outline
-      padding: 18px 46px
+      padding: 18.6px 46px
   &__instagram
     position: absolute
     left: 0
@@ -89,6 +89,9 @@
     animation-name: slideInUp
     animation-duration: 1s
     animation-timing-function: ease
+    transition: 0.2s
+    &:hover
+      color: $primary
     &::after
       content: ''
       background: url('../img/arrow-down.svg') no-repeat center
@@ -111,12 +114,18 @@
     transform: rotate(90deg)
     line-height: 0.8
     font-size: 1.06rem
+    transition: 0.2s
+    &:hover
+      color: $light
+      &::after
+        background-color: $light
     &::after
       content: ''
       width: 50px
       height: 1px
       background-color: $primary
       margin-left: 14px
+      transition: 0.2s
 .title
   margin: 0
   font-family: 'Yeseva One', cursive

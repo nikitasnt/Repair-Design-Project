@@ -27,7 +27,7 @@
     font-size: 12px
 @media screen and ( max-width: 1243px )
   .swiper
-    &-slide
+    &-slide-1
       &__text
         &_margin-left
           margin-left: auto
@@ -90,6 +90,15 @@
     &__tag
       height: 4.943rem
 @media screen and ( max-width: 992px )
+  .header
+    animation-name: none
+  .logo
+    &:hover
+      color: $primary
+  .contacts
+    &__phone
+      &:hover
+        color: $primary
   .navbar
     display: none
   .hero
@@ -97,6 +106,16 @@
       display: none
     &__content
       margin-left: 0
+    &__title
+      animation-name: none
+    &__text
+      animation-name: none
+    &__button
+      animation-name: none
+    &__scroll-down
+      animation-name: none
+      &:hover
+        color: $light
   .clients
     &__card
       min-height: 50rem !important
@@ -116,6 +135,58 @@
         margin-top: 0rem
   .measure
     display: none
+  .up-button
+    &:hover
+      border: 1px solid $primary
+      background-color: $primary
+  .button
+    &_primary
+      &:hover
+        box-shadow: 0px 5px 15px rgba($primary, 0.2)
+        background-color: $primary
+        color: $light !important
+    &_outline
+      &:hover
+        background-color: transparent
+        color: $light
+  .video
+    &__play
+      &:hover
+        box-shadow: 0px 5px 30px rgba($primary, 0.2)
+        background-color: $primary
+  .fantasies
+    &__words
+      &:hover
+        color: $light
+        &::after
+          display: none
+      &_active
+        &:hover
+          color: $primary
+          &::after
+            display: block
+            background-color: $primary
+  .steps
+    &__link
+      &:hover
+        color: darken($light, 64.71)
+        .steps__num::after
+          background-color: darken(desaturate(adjust-hue($primary, -1), 41.09), 41.76)
+      &_active
+        &:hover
+          color: $light
+          .steps__num::after
+            background-color: $primary
+  .address
+    &__link
+      &:hover
+        background-color: $primary
+        border: 1px solid $primary
+  .modal-success
+    &__link
+      &:hover
+        background-color: $primary
+        border: 1px solid $primary
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
@@ -198,27 +269,61 @@
   .swiper-container-2
     &_mobile
       display: block
+// @media screen and ( max-width: 1060px ) and ( min-width: 761px )
+//   .swiper-slide-1
+//     &__text_margin-left
+//       margin-left: 0
+@media screen and ( max-width: 1295px )
+  .measure
+    padding-top: 2rem
+    margin-bottom: -14rem
+@media screen and ( max-width: 992px ) and ( min-width: 781px )
+  .types
+    padding-top: 0
+  .fantasies
+    margin-top: 3rem
+@media screen and ( max-width: 780px ) and ( min-width: 761px )
+  .types, .design-project
+    &__pricetag
+      font-size: 1rem
+@media screen and ( max-width: 760px ) and ( min-width: 571px )
+  .design-project
+    &__card
+      margin-bottom: 5rem
+  .team
+    margin-top: 29rem
+  .types
+    margin-bottom: -20rem
 @media screen and ( max-width: 570px )
   .contacts
     &__phone
       margin-right: 0
       color: $light
       text-decoration: none
+      &:hover
+        color: $light
     &__button
       display: none
   .title
     font-size: 1.64rem
   .hero
+    height: 44.41rem
+    &::after
+      display: none
     &__scroll-down
       display: none
     &__content
-      max-width: 22.86rem
+      // max-width: 22.86rem
+    &__title
+      font-size: 1.91rem
+      max-width: 26.75rem
     &__text
-      font-size: 1.29rem
-      margin-bottom: 2.28rem
+      max-width: 26.75rem
+      font-size: 1.5rem
+      margin-bottom: 3.28rem
     &__button
       display: block
-      min-width: 22.86rem
+      width: 100%
       margin-bottom: 1.85rem
   .section-title
     &__heading
@@ -248,11 +353,20 @@
       margin-bottom: 2rem
     &__pricetag
       padding: 0.98rem 4rem
+  .projects
+    padding-top: 1.6rem
+    padding-bottom: 26.8rem
+  .fantasies
+    margin-top: -9.3rem
   .project
     &__text
       margin-bottom: 1.5rem
+  .design-project
+    padding-top: 12.5rem
+  .team
+    margin-top: 26.2rem
   .swiper
-    &-slide
+    &-slide-1
       &__text
         margin-bottom: 1.1rem
         &_margin-bottom
@@ -296,8 +410,11 @@
       color: $light
   .video
     &__play
-      width: 65px
-      height: 65px
+      width: 37px
+      height: 37px
+    &__icon
+      width: 13px
+      height: 13px
   .footer
     background-image: none
     margin-top: -10.3rem
@@ -345,6 +462,9 @@
       height: 3.3rem
       margin: 0.85rem
       margin-bottom: 3.3rem
+    &__tel
+      &:hover
+        color: $primary
   .team
     &__card
       margin-bottom: 8rem
@@ -361,6 +481,8 @@
   div
     &.invalid
       left: 0
+  .up-button
+    display: none !important
 @media screen and ( max-width: 380px )
   .fantasies
     &__mobile-image
@@ -387,3 +509,34 @@
   .hero
     &__scroll-down
       display: none
+  .modal
+    &__dialog
+      max-width: 32rem
+      padding: 0.8rem 2.8rem
+    &__title
+      margin-bottom: 0
+    &__input-group
+      margin-bottom: 1.26rem
+    &__policy
+      margin-bottom: 1.4rem
+    &__button
+      padding: 0.9rem 1.8rem
+@media screen and ( max-height: 450px )
+  .modal-success
+    &__dialog
+      max-width: 25rem
+      padding: 2.8rem 0.1rem
+      padding-bottom: 1rem
+    &__title
+      font-size: 1.1rem
+      line-height: 1.4rem
+      margin-bottom: 0
+    &__text
+      margin: 0.5rem
+    &__recommendation
+      margin: 0
+      margin-top: -1rem
+    &__link
+      width: 2rem
+      height: 2rem
+      margin-top: 0.4rem

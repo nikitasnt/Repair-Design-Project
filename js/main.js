@@ -409,16 +409,18 @@ $(document).ready(function () {
 
 
   // для срабатывания анимации при доскроллинге до элемента
-  $(window).scroll(function() {
-    $('.no-animated').each(function () {
-        var elementPos = $(this).offset().top;
-
-        var topOfWindow = $(window).scrollTop();
-        if (elementPos < topOfWindow + $(window).innerHeight()) {
-            $(this).removeClass("no-animated");
-        }
+  if ($(window).width() > '992') {
+    $(window).scroll(function() {
+      $('.no-animated').each(function () {
+          var elementPos = $(this).offset().top;
+  
+          var topOfWindow = $(window).scrollTop();
+          if (elementPos < topOfWindow + $(window).innerHeight()) {
+              $(this).removeClass("no-animated");
+          }
+      });
     });
-  });
+  }
 
 
 
@@ -494,6 +496,7 @@ $(document).ready(function () {
           $(form)[0].reset();
           modal.removeClass('modal_visible');
           modalSuccess.addClass('modal-success_visible');
+          ym(62062837,'reachGoal','application');
         },
         error: function (response) {
           console.error("Ошибка запроса: " + response);
@@ -545,6 +548,7 @@ $(document).ready(function () {
           $(form)[0].reset();
           modal.removeClass('modal_visible');
           modalSuccess.addClass('modal-success_visible');
+          ym(62062837,'reachGoal','application');
         },
         error: function (response) {
           console.error("Ошибка запроса: " + response);
@@ -606,6 +610,7 @@ $(document).ready(function () {
           $(form)[0].reset();
           modal.removeClass('modal_visible');
           modalSuccess.addClass('modal-success_visible');
+          ym(62062837,'reachGoal','application');
         },
         error: function (response) {
           console.error("Ошибка запроса: " + response);
@@ -666,6 +671,7 @@ $(document).ready(function () {
           $(form)[0].reset();
           modal.removeClass('modal_visible');
           modalSuccess.addClass('modal-success_visible');
+          ym(62062837,'reachGoal','application');
         },
         error: function (response) {
           console.error("Ошибка запроса: " + response);
@@ -738,4 +744,101 @@ $(document).ready(function () {
   function videoPlay(event) {
     event.target.playVideo();
   }
+
+
+
+  // скролл до нужных секций по навигационным ссылкам
+
+  // до секции hero
+  $('[href="#goToHero"]').on( 'click', function(){
+    var dest = $('.hero'); // получаем направление
+    if(dest !== undefined && dest !== '') { // проверяем существование
+      $('html').animate({ 
+        scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+      }, 500 // скорость прокрутки
+      );
+    }
+    return false;
+  });
+  $('.logo').on( 'click', function(){
+    var dest = $('.hero'); // получаем направление
+    if(dest !== undefined && dest !== '') { // проверяем существование
+      $('html').animate({ 
+        scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+      }, 500 // скорость прокрутки
+      );
+    }
+    return false;
+  });
+
+  // до секции projects
+  $('[href="#goToProjects"]').on( 'click', function(){
+    var dest = $('.projects'); // получаем направление
+    if(dest !== undefined && dest !== '') { // проверяем существование
+      $('html').animate({ 
+        scrollTop: $(dest).offset().top - 40 // прокручиваем страницу к требуемому элементу
+      }, 500 // скорость прокрутки
+      );
+    }
+    return false;
+  });
+  // до секции projects
+  $('[href="#goToProjects"]').on( 'click', function(){
+    var dest = $('.projects'); // получаем направление
+    if(dest !== undefined && dest !== '') { // проверяем существование
+      $('html').animate({ 
+        scrollTop: $(dest).offset().top - 40 // прокручиваем страницу к требуемому элементу
+      }, 500 // скорость прокрутки
+      );
+    }
+    return false;
+  });
+
+  // до секции measure
+  $('[href="#goToMeasure"]').on( 'click', function(){
+    var dest = $('.measure'); // получаем направление
+    if(dest !== undefined && dest !== '') { // проверяем существование
+      $('html').animate({ 
+        scrollTop: $(dest).offset().top - 25 // прокручиваем страницу к требуемому элементу
+      }, 500 // скорость прокрутки
+      );
+    }
+    return false;
+  });
+
+  // до секции team
+  $('[href="#goToTeam"]').on( 'click', function(){
+    var dest = $('.team'); // получаем направление
+    if(dest !== undefined && dest !== '') { // проверяем существование
+      $('html').animate({ 
+        scrollTop: $(dest).offset().top - 50 // прокручиваем страницу к требуемому элементу
+      }, 500 // скорость прокрутки
+      );
+    }
+    return false;
+  });
+
+  // до секции clients
+  $('[href="#goToClients"]').on( 'click', function(){
+    var dest = $('.clients'); // получаем направление
+    if(dest !== undefined && dest !== '') { // проверяем существование
+      $('html').animate({ 
+        scrollTop: $(dest).offset().top - 100 // прокручиваем страницу к требуемому элементу
+      }, 500 // скорость прокрутки
+      );
+    }
+    return false;
+  });
+
+  // до секции footer элемент address
+  $('[href="#goToAddress"]').on( 'click', function(){
+    var dest = $('.address'); // получаем направление
+    if(dest !== undefined && dest !== '') { // проверяем существование
+      $('html').animate({ 
+        scrollTop: $(dest).offset().top - 100 // прокручиваем страницу к требуемому элементу
+      }, 500 // скорость прокрутки
+      );
+    }
+    return false;
+  });
 });

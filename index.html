@@ -4,27 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Repair Design Project</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(62062837, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/62062837" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
   <header class="header">
     <div class="container">
       <div class="menu">
         <div class="menu__logo logo">Repair Design Project</div>
         <nav class="menu__navbar navbar">
-          <a href="#" class="navbar__item">Главная</a>
-          <a href="#" class="navbar__item">Проекты</a>
-          <a href="#" class="navbar__item">Замер</a>
-          <a href="#" class="navbar__item">Команда</a>
-          <a href="#" class="navbar__item">Отзывы</a>
-          <a href="#" class="navbar__item">Контакты</a>
+          <a href="#goToHero" class="navbar__item">Главная</a>
+          <a href="#goToProjects" class="navbar__item">Проекты</a>
+          <a href="#goToMeasure" class="navbar__item">Замер</a>
+          <a href="#goToTeam" class="navbar__item">Команда</a>
+          <a href="#goToClients" class="navbar__item">Отзывы</a>
+          <a href="#goToAddress" class="navbar__item">Контакты</a>
         </nav>
         <div class="menu__contacts contacts">
           <a href="tel:+79997683299" class="contacts__phone phone">+7 (999) 768-32-99</a>
-          <button class="contacts__button button button_primary" data-toggle="modal">Заказать звонок</button>
+          <button onclick="ym(62062837,'reachGoal','button')" class="contacts__button button button_primary" data-toggle="modal">Заказать звонок</button>
         </div>
       </div>
       <!-- /.menu -->
@@ -36,19 +39,19 @@
   <main>
     <section class="hero">
       <div class="hero__instagram instagram">
-        <a href="#" class="instagram__link">Instagram</a>
+        <a href="https://www.instagram.com/" target="_blank" class="instagram__link">Instagram</a>
       </div>
       <div class="container">
         <div class="hero__content">
           <h1 class="hero__title title">Турецкий ремонт в&nbsp;<span class="title_primary">Ростове-на-дону</span></h1>
           <p class="hero__text">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
-          <button class="hero__button hero__button_1 button button_primary" data-toggle="modal">Рассчитать стоимость</button>
-          <button class="hero__button hero__button_2 hero__button_outline button button_outline">Отправить заявку</button>
+          <button onclick="ym(62062837,'reachGoal','button')" class="hero__button hero__button_1 button button_primary" data-toggle="modal">Рассчитать стоимость</button>
+          <button onclick="ym(62062837,'reachGoal','button')" class="hero__button hero__button_2 hero__button_outline button button_outline">Отправить заявку</button>
         </div>
         <!-- /.hero__content -->
       </div>
       <!-- /.container -->
-      <a href="#" class="hero__scroll-down">листайте вниз</a>
+      <a href="#goToProjects" class="hero__scroll-down">листайте вниз</a>
     </section>
     <!-- /.hero -->
 
@@ -148,7 +151,7 @@
           <!-- /.col-40 -->
           <div class="col-60 col-40_mobile">
             <!-- Slider main container -->
-            <div class="swiper-container swiper-container-1 swiper-no-swiping">
+            <div class="swiper-container swiper-container-1 swiper-no-swiping swiper-container-1_mobile">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                   <!-- Slides -->
@@ -185,7 +188,9 @@
         <!-- /.section-title -->
         <div id="player" class="control__video video">
           <script src="https://www.youtube.com/iframe_api"></script>
-          <img src="img/play-icon.svg" alt="play icon" class="video__play">
+          <div class="video__play">
+            <img src="img/play-icon.svg" alt="play icon" class="video__icon">
+          </div>
         </div>
         <!-- /.control__video video -->
         <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
@@ -246,7 +251,7 @@
                   <!-- /.card__item -->
                 </ul>
                 <!-- /.card__list -->
-                <strong class="card__pricetag">
+                <strong class="types__pricetag card__pricetag">
                   от 900 руб / m<sup>2</sup>
                 </strong>
                 <!-- /.card__pricetag -->
@@ -279,7 +284,7 @@
                   <!-- /.card__item -->
                 </ul>
                 <!-- /.card__list -->
-                <strong class="card__pricetag">
+                <strong class="types__pricetag card__pricetag">
                   от 1800 руб / m<sup>2</sup>
                 </strong>
                 <!-- /.card__pricetag -->
@@ -312,7 +317,7 @@
                   <!-- /.card__item -->
                 </ul>
                 <!-- /.card__list -->
-                <strong class="card__pricetag">
+                <strong class="types__pricetag card__pricetag">
                   от 4000 руб / m<sup>2</sup>
                 </strong>
                 <!-- /.card__pricetag -->
@@ -1013,24 +1018,24 @@
       </div>
       <!-- /.footer-wrap -->
       <div class="address footer__address footer__address_desktop">
-        <h4 class="address__title">Ростов на дону, Торговый центр Plaza Прямой телефон +7 (999) 768 32 99</h4>
+        <h4 class="address__title">Ростов на дону, Торговый центр Plaza Прямой телефон <a href="tel:+79997683299" class="address__tel">+7 (999) 768 32 99</a></h4>
         <div class="address__buttons">
-          <a href="#" class="address__link">
+          <a href="mailto:example@example.com" class="address__link">
             <img src="img/footer/email.svg" alt="Email" class="address__icon">
           </a>
-          <a href="#" class="address__link">
+          <a href="https://www.instagram.com/" target="_blank" class="address__link">
             <img src="img/footer/instagram.svg" alt="Instagram" class="address__icon">
           </a>
         </div>
       </div>
       <div class="map footer__map" id="map"></div>
       <div class="address footer__address footer__address_mobile">
-        <h4 class="address__title">Ростов на дону, Торговый центр Plaza Прямой телефон +7 (999) 768 32 99</h4>
+        <h4 class="address__title">Ростов на дону, Торговый центр Plaza Прямой телефон <a href="tel:+79997683299" class="address__tel">+7 (999) 768 32 99</a></h4>
         <div class="address__buttons">
-          <a href="#" class="address__link">
+          <a href="mailto:example@example.com" class="address__link">
             <img src="img/footer/email.svg" alt="Email" class="address__icon">
           </a>
-          <a href="#" class="address__link">
+          <a href="https://www.instagram.com/" target="_blank" class="address__link">
             <img src="img/footer/instagram.svg" alt="Instagram" class="address__icon">
           </a>
         </div>
@@ -1042,16 +1047,16 @@
         <div class="menu">
           <div class="menu__logo logo">Repair Design Project</div>
           <nav class="menu__navbar navbar">
-            <a href="#" class="navbar__item">Главная</a>
-            <a href="#" class="navbar__item">Проекты</a>
-            <a href="#" class="navbar__item">Замер</a>
-            <a href="#" class="navbar__item">Команда</a>
-            <a href="#" class="navbar__item">Отзывы</a>
-            <a href="#" class="navbar__item">Контакты</a>
+            <a href="#goToHero" class="navbar__item">Главная</a>
+            <a href="#goToProjects" class="navbar__item">Проекты</a>
+            <a href="#goToMeasure" class="navbar__item">Замер</a>
+            <a href="#goToTeam" class="navbar__item">Команда</a>
+            <a href="#goToClients" class="navbar__item">Отзывы</a>
+            <a href="#goToAddress" class="navbar__item">Контакты</a>
           </nav>
           <div class="menu__contacts contacts">
             <a href="tel:+79997683299" class="contacts__phone phone">+7 (999) 768-32-99</a>
-            <button class="contacts__button button button_primary" data-toggle="modal">Заказать звонок</button>
+            <button onclick="ym(62062837,'reachGoal','button')" class="contacts__button button button_primary" data-toggle="modal">Заказать звонок</button>
           </div>
         </div>
         <!-- /.menu -->
@@ -1101,7 +1106,7 @@
           <p class="modal-success__recommendation">Также рекомендуем подписатьтся на нашу группу <span class="modal-success__recommendation_word">ВКонтакте</span>. Там появляются новости о нашей компании и всевозможные скидки и акции</p>
         </div>
         <div class="col-30">
-          <a href="#" class="modal-success__link">
+          <a href="https://vk.com/" target="_blank" class="modal-success__link">
             <img src="img/vk.svg" alt="v_kontakte" class="modal-success__icon">
           </a>
         </div>
