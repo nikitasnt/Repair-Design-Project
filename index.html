@@ -8,10 +8,18 @@
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    [class*="ymaps-2"][class*="-ground-pane"] {
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+      /* Firefox 3.5+ */
+      -webkit-filter: grayscale(100%);
+      /* Chrome 19+ & Safari 6+ */
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(62062837, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/62062837" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(62062837, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/62062837" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 
   <header class="header">
     <div class="container">
@@ -46,7 +54,7 @@
           <h1 class="hero__title title">Турецкий ремонт в&nbsp;<span class="title_primary">Ростове-на-дону</span></h1>
           <p class="hero__text">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
           <button onclick="ym(62062837,'reachGoal','button')" class="hero__button hero__button_1 button button_primary" data-toggle="modal">Рассчитать стоимость</button>
-          <button onclick="ym(62062837,'reachGoal','button')" class="hero__button hero__button_2 hero__button_outline button button_outline">Отправить заявку</button>
+          <button onclick="ym(62062837,'reachGoal','button')" class="hero__button hero__button_2 hero__button_outline button button_outline" data-toggle="modal">Отправить заявку</button>
         </div>
         <!-- /.hero__content -->
       </div>
@@ -156,13 +164,13 @@
               <div class="swiper-wrapper">
                   <!-- Slides -->
                   <div class="swiper-slide swiper-slide-1">
-                    <img class="project__image" src="img/projects/project.jpg" alt="1 картинка 1 слайдера">
+                    <img class="project__image lazyload" data-src="img/projects/image-1.jpg" src="img/projects/image-1.jpg" alt="1 картинка 1 слайдера">
                   </div>
                   <div class="swiper-slide swiper-slide-1">
-                    <img class="project__image" src="img/projects/project.jpg" alt="2 картинка 1 слайдера">
+                    <img class="project__image lazyload" data-src="img/projects/image-2.jpg" src="img/projects/image-2.jpg" alt="2 картинка 1 слайдера">
                   </div>
                   <div class="swiper-slide swiper-slide-1">
-                    <img class="project__image" src="img/projects/project.jpg" alt="3 картинка 1 слайдера">
+                    <img class="project__image lazyload" data-src="img/projects/image-3.jpg" src="img/projects/image-3.jpg" alt="3 картинка 1 слайдера">
                   </div>
               </div>
             </div>
@@ -181,7 +189,7 @@
           <h2 class="section-title__heading">Онлайн контроль</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
-            <img src="img/video.svg" alt="video">
+            <img class="lazyload" data-src="img/video.svg" src="img/video.svg" alt="video">
           </div>
           <!-- /.section-title__image -->
         </div>
@@ -189,18 +197,18 @@
         <div id="player" class="control__video video">
           <script src="https://www.youtube.com/iframe_api"></script>
           <div class="video__play">
-            <img src="img/play-icon.svg" alt="play icon" class="video__icon">
+            <img data-src="img/play-icon.svg" src="img/play-icon.svg" alt="play icon" class="video__icon lazyload">
           </div>
         </div>
         <!-- /.control__video video -->
         <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
         <form action="control-form.php" method="POST" class="form control__form">
           <div class="control__input-group input-group">
-            <label for="user-name" class="label form__label control__label">Имя</label>
+            <label for="control-user-name" class="label form__label control__label">Имя</label>
             <input type="text" name="userName" class="input form__input control__input" id="control-user-name" placeholder="Как вас зовут:">
           </div>
           <div class="control__input-group input-group">
-            <label for="user-phone" class="label form__label control__label">Телефон</label>
+            <label for="control-user-phone" class="label form__label control__label">Телефон</label>
             <input type="tel" name="userPhone" class="input form__input control__input" id="control-user-phone" placeholder="Ваш номер телефона:">
           </div>
           <button class="button button_primary control__button">Отправить</button>
@@ -222,7 +230,7 @@
           <h2 class="section-title__heading">Виды ремонта</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
-            <img src="img/repair.svg" alt="repair">
+            <img class="lazyload" data-src="img/repair.svg" src="img/repair.svg" alt="repair">
           </div>
           <!-- /.section-title__image -->
         </div>
@@ -230,7 +238,7 @@
         <div class="row">
           <div class="col-30 col-30_fadeInBottomLeft no-animated">
             <div class="card types__card">
-              <img src="img/types/image-1.jpg" alt="Косметический ремонт" class="card__image">
+              <img data-src="img/types/image-1.jpg" src="img/types/image-1.jpg" alt="Косметический ремонт" class="card__image lazyload">
               <div class="card__text">
                 <h3 class="card__title">Косметический ремонт</h3>
                 <!-- /.card__title -->
@@ -263,7 +271,7 @@
           <!-- /.col-30 -->
           <div class="col-30 col-30_fadeInDown no-animated">
             <div class="card types__card">
-              <img src="img/types/image-2.jpg" alt="Капитальный ремонт" class="card__image">
+              <img data-src="img/types/image-2.jpg" src="img/types/image-2.jpg" alt="Капитальный ремонт" class="card__image lazyload">
               <div class="card__text">
                 <h3 class="card__title">Капитальный ремонт</h3>
                 <!-- /.card__title -->
@@ -296,7 +304,7 @@
           <!-- /.col-30 -->
           <div class="col-30 col-30_fadeInBottomRight no-animated">
             <div class="card types__card">
-              <img src="img/types/image-3.jpg" alt="Дизайнерский ремонт" class="card__image">
+              <img data-src="img/types/image-3.jpg" src="img/types/image-3.jpg" alt="Дизайнерский ремонт" class="card__image lazyload">
               <div class="card__text">
                 <h3 class="card__title">Дизайнерский ремонт</h3>
                 <!-- /.card__title -->
@@ -361,15 +369,15 @@
               <h3 class="measure__title">Оставьте заявку на бесплатный выезд замерщика</h3>
               <form action="measure.php" method="POST" class="form measure__form">
                 <div class="input-group measure__input-group">
-                  <label for="user-name" class="label form__label label_light">Имя</label>
+                  <label for="measure-user-name" class="label form__label label_light">Имя</label>
                   <input type="text" name="userName" class="input form__input measure__input input_light" id="measure-user-name" placeholder="Как вас зовут:">
                 </div>
                 <div class="input-group measure__input-group">
-                  <label for="user-phone" class="label form__label label_light">Телефон</label>
+                  <label for="measure-user-phone" class="label form__label label_light">Телефон</label>
                   <input type="tel" name="userPhone" class="input form__input measure__input input_light" id="measure-user-phone" placeholder="Ваш номер телефона:">
                 </div>
                 <div class="input-group measure__input-group measure__input-group_last">
-                  <label for="user-email" class="label form__label label_light">Email</label>
+                  <label for="measure-user-email" class="label form__label label_light">Email</label>
                   <input type="email" name="userEmail" class="input form__input measure__input input_light" id="measure-user-email" placeholder="Ваш email">
                 </div>
                 <div class="policy measure__policy">
@@ -384,7 +392,7 @@
             <!-- /.measure__dialog -->
             <div class="measure__sale sale">
               <div class="sale__tag">
-                <img src="img/measure/pig-bank.svg" alt="Свинья-копилка" class="sale__icon">
+                <img data-src="img/measure/pig-bank.svg" src="img/measure/pig-bank.svg" alt="Свинья-копилка" class="sale__icon lazyload">
               </div>
               <div class="sale__description">Это поможет сэкономить 10 - 20% от стоимости материалов</div>
             </div>
@@ -421,37 +429,37 @@
               <div class="swiper-wrapper">
                   <!-- Slides -->
                   <div class="swiper-slide">
-                    <img class="fantasies__mobile-image" src="img/fantasies/mobile-image-1.jpg" alt="Мобильная картинка 1">
+                    <img class="fantasies__mobile-image lazyload" data-src="img/fantasies/mobile-image-1.jpg" src="img/fantasies/mobile-image-1.jpg" alt="Мобильная картинка 1">
                   </div>
                   <div class="swiper-slide">
-                    <img class="fantasies__mobile-image" src="img/fantasies/mobile-image-1.jpg" alt="Мобильная картинка 2">
+                    <img class="fantasies__mobile-image lazyload" data-src="img/fantasies/mobile-image-2.jpg" src="img/fantasies/mobile-image-2.jpg" alt="Мобильная картинка 2">
                   </div>
                   <div class="swiper-slide">
-                    <img class="fantasies__mobile-image" src="img/fantasies/mobile-image-1.jpg" alt="Мобильная картинка 3">
+                    <img class="fantasies__mobile-image lazyload" data-src="img/fantasies/mobile-image-3.jpg" src="img/fantasies/mobile-image-3.jpg" alt="Мобильная картинка 3">
                   </div>
                   <div class="swiper-slide">
-                    <img class="fantasies__mobile-image" src="img/fantasies/mobile-image-1.jpg" alt="Мобильная картинка 4">
+                    <img class="fantasies__mobile-image lazyload" data-src="img/fantasies/mobile-image-4.jpg" src="img/fantasies/mobile-image-4.jpg" alt="Мобильная картинка 4">
                   </div>
                   <div class="swiper-slide">
-                    <img class="fantasies__mobile-image" src="img/fantasies/mobile-image-1.jpg" alt="Мобильная картинка 5">
+                    <img class="fantasies__mobile-image lazyload" data-src="img/fantasies/mobile-image-5.jpg" src="img/fantasies/mobile-image-5.jpg" alt="Мобильная картинка 5">
                   </div>
                   <div class="swiper-slide">
-                    <img class="fantasies__mobile-image" src="img/fantasies/mobile-image-1.jpg" alt="Мобильная картинка 6">
+                    <img class="fantasies__mobile-image lazyload" data-src="img/fantasies/mobile-image-6.jpg" src="img/fantasies/mobile-image-6.jpg" alt="Мобильная картинка 6">
                   </div>
                   <div class="swiper-slide">
-                    <img class="fantasies__mobile-image" src="img/fantasies/mobile-image-1.jpg" alt="Мобильная картинка 7">
+                    <img class="fantasies__mobile-image lazyload" data-src="img/fantasies/mobile-image-7.jpg" src="img/fantasies/mobile-image-7.jpg" alt="Мобильная картинка 7">
                   </div>
                   <div class="swiper-slide">
-                    <img class="fantasies__mobile-image" src="img/fantasies/mobile-image-1.jpg" alt="Мобильная картинка 8">
+                    <img class="fantasies__mobile-image lazyload" data-src="img/fantasies/mobile-image-8.jpg" src="img/fantasies/mobile-image-8.jpg" alt="Мобильная картинка 8">
                   </div>
                   <div class="swiper-slide">
-                    <img class="fantasies__mobile-image" src="img/fantasies/mobile-image-1.jpg" alt="Мобильная картинка 9">
+                    <img class="fantasies__mobile-image lazyload" data-src="img/fantasies/mobile-image-9.jpg" src="img/fantasies/mobile-image-9.jpg" alt="Мобильная картинка 9">
                   </div>
                   <div class="swiper-slide">
-                    <img class="fantasies__mobile-image" src="img/fantasies/mobile-image-1.jpg" alt="Мобильная картинка 10">
+                    <img class="fantasies__mobile-image lazyload" data-src="img/fantasies/mobile-image-10.jpg" src="img/fantasies/mobile-image-10.jpg" alt="Мобильная картинка 10">
                   </div>
                   <div class="swiper-slide">
-                    <img class="fantasies__mobile-image" src="img/fantasies/mobile-image-1.jpg" alt="Мобильная картинка 11">
+                    <img class="fantasies__mobile-image lazyload" data-src="img/fantasies/mobile-image-11.jpg" src="img/fantasies/mobile-image-11.jpg" alt="Мобильная картинка 11">
                   </div>
               </div>
 
@@ -468,48 +476,48 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img class="fantasies__image-1" src="img/fantasies/image-1.jpg" alt="Картинка 1">
-                  <img class="fantasies__image-2" src="img/fantasies/image-2.jpg" alt="Картинка 2">
+                  <img class="fantasies__image-1 lazyload" data-src="img/fantasies/1-image-1.jpg" src="img/fantasies/1-image-1.jpg" alt="Картинка 1">
+                  <img class="fantasies__image-2 lazyload" data-src="img/fantasies/1-image-2.jpg" src="img/fantasies/1-image-2.jpg" alt="Картинка 2">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-1" src="img/fantasies/image-1.jpg" alt="Картинка 1">
-                  <img class="fantasies__image-2" src="img/fantasies/image-2.jpg" alt="Картинка 2">
+                  <img class="fantasies__image-1 lazyload" data-src="img/fantasies/2-image-1.jpg" src="img/fantasies/2-image-1.jpg" alt="Картинка 1">
+                  <img class="fantasies__image-2 lazyload" data-src="img/fantasies/2-image-2.jpg" src="img/fantasies/2-image-2.jpg" alt="Картинка 2">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-1" src="img/fantasies/image-1.jpg" alt="Картинка 1">
-                  <img class="fantasies__image-2" src="img/fantasies/image-2.jpg" alt="Картинка 2">
+                  <img class="fantasies__image-1 lazyload" data-src="img/fantasies/3-image-1.jpg" src="img/fantasies/3-image-1.jpg" alt="Картинка 1">
+                  <img class="fantasies__image-2 lazyload" data-src="img/fantasies/3-image-2.jpg" src="img/fantasies/3-image-2.jpg" alt="Картинка 2">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-1" src="img/fantasies/image-1.jpg" alt="Картинка 1">
-                  <img class="fantasies__image-2" src="img/fantasies/image-2.jpg" alt="Картинка 2">
+                  <img class="fantasies__image-1 lazyload" data-src="img/fantasies/4-image-1.jpg" src="img/fantasies/4-image-1.jpg" alt="Картинка 1">
+                  <img class="fantasies__image-2 lazyload" data-src="img/fantasies/4-image-2.jpg" src="img/fantasies/4-image-2.jpg" alt="Картинка 2">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-1" src="img/fantasies/image-1.jpg" alt="Картинка 1">
-                  <img class="fantasies__image-2" src="img/fantasies/image-2.jpg" alt="Картинка 2">
+                  <img class="fantasies__image-1 lazyload" data-src="img/fantasies/5-image-1.jpg" src="img/fantasies/5-image-1.jpg" alt="Картинка 1">
+                  <img class="fantasies__image-2 lazyload" data-src="img/fantasies/5-image-2.jpg" src="img/fantasies/5-image-2.jpg" alt="Картинка 2">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-1" src="img/fantasies/image-1.jpg" alt="Картинка 1">
-                  <img class="fantasies__image-2" src="img/fantasies/image-2.jpg" alt="Картинка 2">
+                  <img class="fantasies__image-1 lazyload" data-src="img/fantasies/6-image-1.jpg" src="img/fantasies/6-image-1.jpg" alt="Картинка 1">
+                  <img class="fantasies__image-2 lazyload" data-src="img/fantasies/6-image-2.jpg" src="img/fantasies/6-image-2.jpg" alt="Картинка 2">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-1" src="img/fantasies/image-1.jpg" alt="Картинка 1">
-                  <img class="fantasies__image-2" src="img/fantasies/image-2.jpg" alt="Картинка 2">
+                  <img class="fantasies__image-1 lazyload" data-src="img/fantasies/7-image-1.jpg" src="img/fantasies/7-image-1.jpg" alt="Картинка 1">
+                  <img class="fantasies__image-2 lazyload" data-src="img/fantasies/7-image-2.jpg" src="img/fantasies/7-image-2.jpg" alt="Картинка 2">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-1" src="img/fantasies/image-1.jpg" alt="Картинка 1">
-                  <img class="fantasies__image-2" src="img/fantasies/image-2.jpg" alt="Картинка 2">
+                  <img class="fantasies__image-1 lazyload" data-src="img/fantasies/8-image-1.jpg" src="img/fantasies/8-image-1.jpg" alt="Картинка 1">
+                  <img class="fantasies__image-2 lazyload" data-src="img/fantasies/8-image-2.jpg" src="img/fantasies/8-image-2.jpg" alt="Картинка 2">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-1" src="img/fantasies/image-1.jpg" alt="Картинка 1">
-                  <img class="fantasies__image-2" src="img/fantasies/image-2.jpg" alt="Картинка 2">
+                  <img class="fantasies__image-1 lazyload" data-src="img/fantasies/9-image-1.jpg" src="img/fantasies/9-image-1.jpg" alt="Картинка 1">
+                  <img class="fantasies__image-2 lazyload" data-src="img/fantasies/9-image-2.jpg" src="img/fantasies/9-image-2.jpg" alt="Картинка 2">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-1" src="img/fantasies/image-1.jpg" alt="Картинка 1">
-                  <img class="fantasies__image-2" src="img/fantasies/image-2.jpg" alt="Картинка 2">
+                  <img class="fantasies__image-1 lazyload" data-src="img/fantasies/10-image-1.jpg" src="img/fantasies/10-image-1.jpg" alt="Картинка 1">
+                  <img class="fantasies__image-2 lazyload" data-src="img/fantasies/10-image-2.jpg" src="img/fantasies/10-image-2.jpg" alt="Картинка 2">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-1" src="img/fantasies/image-1.jpg" alt="Картинка 1">
-                  <img class="fantasies__image-2" src="img/fantasies/image-2.jpg" alt="Картинка 2">
+                  <img class="fantasies__image-1 lazyload" data-src="img/fantasies/11-image-1.jpg" src="img/fantasies/11-image-1.jpg" alt="Картинка 1">
+                  <img class="fantasies__image-2 lazyload" data-src="img/fantasies/11-image-2.jpg" src="img/fantasies/11-image-2.jpg" alt="Картинка 2">
                 </div>
               </div>
             </div>
@@ -522,48 +530,48 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                  <img class="fantasies__image-3" src="img/fantasies/image-3.jpg" alt="Картинка 3">
-                  <img class="fantasies__image-4" src="img/fantasies/image-4.jpg" alt="Картинка 4">
+                  <img class="fantasies__image-3 lazyload" data-src="img/fantasies/1-image-3.jpg" src="img/fantasies/1-image-3.jpg" alt="Картинка 3">
+                  <img class="fantasies__image-4 lazyload" data-src="img/fantasies/1-image-4.jpg" src="img/fantasies/1-image-4.jpg" alt="Картинка 4">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-3" src="img/fantasies/image-3.jpg" alt="Картинка 3">
-                  <img class="fantasies__image-4" src="img/fantasies/image-4.jpg" alt="Картинка 4">
+                  <img class="fantasies__image-3 lazyload" data-src="img/fantasies/2-image-3.jpg" src="img/fantasies/2-image-3.jpg" alt="Картинка 3">
+                  <img class="fantasies__image-4 lazyload" data-src="img/fantasies/2-image-4.jpg" src="img/fantasies/2-image-4.jpg" alt="Картинка 4">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-3" src="img/fantasies/image-3.jpg" alt="Картинка 3">
-                  <img class="fantasies__image-4" src="img/fantasies/image-4.jpg" alt="Картинка 4">
+                  <img class="fantasies__image-3 lazyload" data-src="img/fantasies/3-image-3.jpg" src="img/fantasies/3-image-3.jpg" alt="Картинка 3">
+                  <img class="fantasies__image-4 lazyload" data-src="img/fantasies/3-image-4.jpg" src="img/fantasies/3-image-4.jpg" alt="Картинка 4">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-3" src="img/fantasies/image-3.jpg" alt="Картинка 3">
-                  <img class="fantasies__image-4" src="img/fantasies/image-4.jpg" alt="Картинка 4">
+                  <img class="fantasies__image-3 lazyload" data-src="img/fantasies/4-image-3.jpg" src="img/fantasies/4-image-3.jpg" alt="Картинка 3">
+                  <img class="fantasies__image-4 lazyload" data-src="img/fantasies/4-image-4.jpg" src="img/fantasies/4-image-4.jpg" alt="Картинка 4">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-3" src="img/fantasies/image-3.jpg" alt="Картинка 3">
-                  <img class="fantasies__image-4" src="img/fantasies/image-4.jpg" alt="Картинка 4">
+                  <img class="fantasies__image-3 lazyload" data-src="img/fantasies/5-image-3.jpg" src="img/fantasies/5-image-3.jpg" alt="Картинка 3">
+                  <img class="fantasies__image-4 lazyload" data-src="img/fantasies/5-image-4.jpg" src="img/fantasies/5-image-4.jpg" alt="Картинка 4">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-3" src="img/fantasies/image-3.jpg" alt="Картинка 3">
-                  <img class="fantasies__image-4" src="img/fantasies/image-4.jpg" alt="Картинка 4">
+                  <img class="fantasies__image-3 lazyload" data-src="img/fantasies/6-image-3.jpg" src="img/fantasies/6-image-3.jpg" alt="Картинка 3">
+                  <img class="fantasies__image-4 lazyload" data-src="img/fantasies/6-image-4.jpg" src="img/fantasies/6-image-4.jpg" alt="Картинка 4">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-3" src="img/fantasies/image-3.jpg" alt="Картинка 3">
-                  <img class="fantasies__image-4" src="img/fantasies/image-4.jpg" alt="Картинка 4">
+                  <img class="fantasies__image-3 lazyload" data-src="img/fantasies/7-image-3.jpg" src="img/fantasies/7-image-3.jpg" alt="Картинка 3">
+                  <img class="fantasies__image-4 lazyload" data-src="img/fantasies/7-image-4.jpg" src="img/fantasies/7-image-4.jpg" alt="Картинка 4">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-3" src="img/fantasies/image-3.jpg" alt="Картинка 3">
-                  <img class="fantasies__image-4" src="img/fantasies/image-4.jpg" alt="Картинка 4">
+                  <img class="fantasies__image-3 lazyload" data-src="img/fantasies/8-image-3.jpg" src="img/fantasies/8-image-3.jpg" alt="Картинка 3">
+                  <img class="fantasies__image-4 lazyload" data-src="img/fantasies/8-image-4.jpg" src="img/fantasies/8-image-4.jpg" alt="Картинка 4">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-3" src="img/fantasies/image-3.jpg" alt="Картинка 3">
-                  <img class="fantasies__image-4" src="img/fantasies/image-4.jpg" alt="Картинка 4">
+                  <img class="fantasies__image-3 lazyload" data-src="img/fantasies/9-image-3.jpg" src="img/fantasies/9-image-3.jpg" alt="Картинка 3">
+                  <img class="fantasies__image-4 lazyload" data-src="img/fantasies/9-image-4.jpg" src="img/fantasies/9-image-4.jpg" alt="Картинка 4">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-3" src="img/fantasies/image-3.jpg" alt="Картинка 3">
-                  <img class="fantasies__image-4" src="img/fantasies/image-4.jpg" alt="Картинка 4">
+                  <img class="fantasies__image-3 lazyload" data-src="img/fantasies/10-image-3.jpg" src="img/fantasies/10-image-3.jpg" alt="Картинка 3">
+                  <img class="fantasies__image-4 lazyload" data-src="img/fantasies/10-image-4.jpg" src="img/fantasies/10-image-4.jpg" alt="Картинка 4">
                 </div>
                 <div class="swiper-slide">
-                  <img class="fantasies__image-3" src="img/fantasies/image-3.jpg" alt="Картинка 3">
-                  <img class="fantasies__image-4" src="img/fantasies/image-4.jpg" alt="Картинка 4">
+                  <img class="fantasies__image-3 lazyload" data-src="img/fantasies/11-image-3.jpg" src="img/fantasies/11-image-3.jpg" alt="Картинка 3">
+                  <img class="fantasies__image-4 lazyload" data-src="img/fantasies/11-image-4.jpg" src="img/fantasies/11-image-4.jpg" alt="Картинка 4">
                 </div>
               </div>
             </div>
@@ -582,7 +590,7 @@
           <h2 class="section-title__heading">Дизайн проект</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
-            <img src="img/design.svg" alt="design">
+            <img class="lazyload" data-src="img/design.svg" src="img/design.svg" alt="design">
           </div>
           <p class="section-title__description">Дизайн-проект не только помогает сделать ремонт вашей квартиры более современным, но и значительно удешевляет материалы и сокращает время ремонтных работ</p>
           <!-- /.section-title__image -->
@@ -591,7 +599,7 @@
         <div class="row">
           <div class="col-30 col-30_fadeInBottomLeft no-animated">
             <div class="card design-project__card">
-              <img src="img/types/image-1.jpg" alt="Косметический ремонт" class="card__image">
+              <img data-src="img/types/image-1.jpg" src="img/types/image-1.jpg" alt="Косметический ремонт" class="card__image lazyload">
               <div class="card__text">
                 <h3 class="card__title">Минимальный</h3>
                 <!-- /.card__title -->
@@ -618,7 +626,7 @@
           <!-- /.col-30 -->
           <div class="col-30 col-30_fadeInDown no-animated">
             <div class="card design-project__card">
-              <img src="img/types/image-3.jpg" alt="Капитальный ремонт" class="card__image">
+              <img data-src="img/types/image-3.jpg" src="img/types/image-3.jpg" alt="Капитальный ремонт" class="card__image lazyload">
               <div class="card__text">
                 <h3 class="card__title">Стандартный</h3>
                 <!-- /.card__title -->
@@ -651,7 +659,7 @@
           <!-- /.col -->
           <div class="col-30 col-30_fadeInBottomRight no-animated">
             <div class="card design-project__card">
-              <img src="img/design-project/image-1.jpg" alt="Дизайнерский ремонт" class="card__image">
+              <img data-src="img/design-project/image-1.jpg" src="img/design-project/image-1.jpg" alt="Дизайнерский ремонт" class="card__image lazyload">
               <div class="card__text">
                 <h3 class="card__title">Полный</h3>
                 <!-- /.card__title -->
@@ -762,7 +770,7 @@
               </div>
               <div id="steps-link-2" class="steps__link">
                 <strong class="steps__num">02</strong>
-                <h5 class="steps__name">Составление <br>сметы</span></h5>
+                <h5 class="steps__name">Составление <br>сметы</h5>
               </div>
               <div id="steps-link-3" class="steps__link steps__link_last">
                 <strong class="steps__num ">03</strong>
@@ -791,28 +799,28 @@
               <div class="swiper-wrapper">
                   <!-- Slides -->
                   <div class="swiper-slide swiper-slide-3">
-                    <img class="steps__image" src="img/steps/steps-1.jpg" alt="картинка 1 слайдера 2">
+                    <img class="steps__image lazyload" data-src="img/steps/steps-1.jpg" src="img/steps/steps-1.jpg" alt="картинка 1 слайдера 2">
                   </div>
                   <div class="swiper-slide swiper-slide-3">
-                    <img class="steps__image" src="img/steps/steps-2.jpg" alt="картинка 2 слайдера 2">
+                    <img class="steps__image lazyload" data-src="img/steps/steps-2.jpg" src="img/steps/steps-2.jpg" alt="картинка 2 слайдера 2">
                   </div>
                   <div class="swiper-slide swiper-slide-3">
-                    <img class="steps__image" src="img/steps/steps-3.jpg" alt="картинка 3 слайдера 2">
+                    <img class="steps__image lazyload" data-src="img/steps/steps-3.jpg" src="img/steps/steps-3.jpg" alt="картинка 3 слайдера 2">
                   </div>
                   <div class="swiper-slide swiper-slide-3">
-                    <img class="steps__image" src="img/steps/steps-4.jpg" alt="картинка 4 слайдера 2">
+                    <img class="steps__image lazyload" data-src="img/steps/steps-4.jpg" src="img/steps/steps-4.jpg" alt="картинка 4 слайдера 2">
                   </div>
                   <div class="swiper-slide swiper-slide-3">
-                    <img class="steps__image" src="img/steps/steps-5.jpg" alt="картинка 5 слайдера 2">
+                    <img class="steps__image lazyload" data-src="img/steps/steps-5.jpg" src="img/steps/steps-5.jpg" alt="картинка 5 слайдера 2">
                   </div>
                   <div class="swiper-slide swiper-slide-3">
-                    <img class="steps__image" src="img/steps/steps-6.jpg" alt="картинка 6 слайдера 2">
+                    <img class="steps__image lazyload" data-src="img/steps/steps-6.jpg" src="img/steps/steps-6.jpg" alt="картинка 6 слайдера 2">
                   </div>
               </div>
             </div>
           </div>
           <!-- /.col-70 -->
-        </div class="row">
+        </div>
         <!-- /.row -->
       </div>
       <!-- /.container -->
@@ -825,7 +833,7 @@
           <h2 class="section-title__heading team__heading">Наша команда</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
-            <img src="img/team.svg" alt="team">
+            <img class="lazyload" data-src="img/team.svg" src="img/team.svg" alt="team">
           </div>
           <p class="section-title__description team__first-description">Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться</p>
           <!-- /.section-title__image -->
@@ -835,9 +843,9 @@
           <div class="col-30 col-30_fadeInBottomLeft no-animated">
             <div class="card team__card">
               <div class="card__icon team__badge">
-                <img src="img/team/icon-1.svg" alt="Иконка 1" class="team__icon">
+                <img data-src="img/team/icon-1.svg" src="img/team/icon-1.svg" alt="Иконка 1" class="team__icon lazyload">
               </div>
-              <img src="img/team/team-1.jpg" alt="Фото 1" class="card__image">
+              <img data-src="img/team/team-1.jpg" src="img/team/team-1.jpg" alt="Фото 1" class="card__image lazyload">
               <div class="card__text team__text">
                 <h3 class="card__title team__title">Алексей Колмаков</h3>
                 <!-- /.card__title -->
@@ -853,9 +861,9 @@
           <div class="col-30 col-30_fadeInDown no-animated">
             <div class="card team__card">
               <div class="card__icon team__badge">
-                <img src="img/team/icon-2.svg" alt="Иконка 2" class="team__icon">
+                <img data-src="img/team/icon-2.svg" src="img/team/icon-2.svg" alt="Иконка 2" class="team__icon lazyload">
               </div>
-              <img src="img/team/team-2.jpg" alt="Фото 2" class="card__image">
+              <img data-src="img/team/team-2.jpg" src="img/team/team-2.jpg" alt="Фото 2" class="card__image lazyload">
               <div class="card__text team__text">
                 <h3 class="card__title team__title">Алиса Сухорукова</h3>
                 <!-- /.card__title -->
@@ -871,9 +879,9 @@
           <div class="col-30 col-30_fadeInBottomRight no-animated">
             <div class="card team__card">
               <div class="card__icon team__badge">
-                <img src="img/team/icon-3.svg" alt="Иконка 3" class="team__icon">
+                <img data-src="img/team/icon-3.svg" src="img/team/icon-3.svg" alt="Иконка 3" class="team__icon lazyload">
               </div>
-              <img src="img/team/team-3.jpg" alt="Фото 3" class="card__image">
+              <img data-src="img/team/team-3.jpg" src="img/team/team-3.jpg" alt="Фото 3" class="card__image lazyload">
               <div class="card__text team__text">
                 <h3 class="card__title team__title">Давид Волынев</h3>
                 <!-- /.card__title -->
@@ -900,7 +908,7 @@
           <h2 class="section-title__heading clients__heading">Наши клиенты</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
-            <img src="img/clients/clients.svg" alt="clients">
+            <img class="lazyload" data-src="img/clients/clients.svg" src="img/clients/clients.svg" alt="clients">
           </div>
           <p class="section-title__description clients__description">80% наших клиентов рекомендуют нас своим знакомым и друзьям</p>
           <!-- /.section-title__image -->
@@ -911,7 +919,7 @@
             <div class="card clients__card">
               <div class="clients__people">
                 <div class="clients__photo">
-                  <img class="clients__file-photo" src="img/clients/client-1.jpg" alt="Клиент 1">
+                  <img class="clients__file-photo lazyload" data-src="img/clients/client-1.jpg" src="img/clients/client-1.jpg" alt="Клиент 1">
                 </div>
                 <h4 class="clients__name">Савельева Екатерина Львовна</h4>
               </div>
@@ -921,11 +929,11 @@
             <!-- /.card -->
             <div class="clients__tag">
               <div class="clients__icon">
-                <img src="img/clients/area.svg" alt="Площадь">
+                <img class="lazyload" data-src="img/clients/area.svg" src="img/clients/area.svg" alt="Площадь">
               </div>
               <strong class="clients__value clients__value_first">40 M<sup>2</sup></strong>
               <div class="clients__icon">
-                <img src="img/clients/calendar.svg" alt="Время">
+                <img class="lazyload" data-src="img/clients/calendar.svg" src="img/clients/calendar.svg" alt="Время">
               </div>
               <strong class="clients__value">48 дней</strong>
             </div>
@@ -936,7 +944,7 @@
             <div class="card clients__card">
               <div class="clients__people">
                 <div class="clients__photo">
-                  <img class="clients__file-photo" src="img/clients/client-2.jpg" alt="Клиент 2">
+                  <img class="clients__file-photo lazyload" data-src="img/clients/client-2.jpg" src="img/clients/client-2.jpg" alt="Клиент 2">
                 </div>
                 <h4 class="clients__name">Большов Михаил Анатольевич</h4>
               </div>
@@ -946,11 +954,11 @@
             <!-- /.card -->
             <div class="clients__tag">
               <div class="clients__icon">
-                <img src="img/clients/area.svg" alt="Площадь">
+                <img class="lazyload" data-src="img/clients/area.svg" src="img/clients/area.svg" alt="Площадь">
               </div>
               <strong class="clients__value clients__value_first">90 M<sup>2</sup></strong>
               <div class="clients__icon">
-                <img src="img/clients/calendar.svg" alt="Время">
+                <img class="lazyload" data-src="img/clients/calendar.svg" src="img/clients/calendar.svg" alt="Время">
               </div>
               <strong class="clients__value">128 дней</strong>
             </div>
@@ -961,7 +969,7 @@
             <div class="card clients__card">
               <div class="clients__people">
                 <div class="clients__photo">
-                  <img class="clients__file-photo" src="img/clients/client-3.jpg" alt="Клиент 3">
+                  <img class="clients__file-photo lazyload" data-src="img/clients/client-3.jpg" src="img/clients/client-3.jpg" alt="Клиент 3">
                 </div>
                 <h4 class="clients__name">Хасанов Даниил Муратович</h4>
               </div>
@@ -971,11 +979,11 @@
             <!-- /.card -->
             <div class="clients__tag">
               <div class="clients__icon">
-                <img src="img/clients/area.svg" alt="Площадь">
+                <img class="lazyload" data-src="img/clients/area.svg" src="img/clients/area.svg" alt="Площадь">
               </div>
               <strong class="clients__value clients__value_first">56 M<sup>2</sup></strong>
               <div class="clients__icon">
-                <img src="img/clients/calendar.svg" alt="Время">
+                <img class="lazyload" data-src="img/clients/calendar.svg" src="img/clients/calendar.svg" alt="Время">
               </div>
               <strong class="clients__value">86 дней</strong>
             </div>
@@ -996,15 +1004,15 @@
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="footer.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
-            <label for="user-name" class="label form__label label_light">Имя</label>
+            <label for="footer-user-name" class="label form__label label_light">Имя</label>
             <input type="text" name="userName" class="input form__input footer__input input_light" id="footer-user-name" placeholder="Как вас зовут:">
           </div>
           <div class="input-group footer__input-group">
-            <label for="user-phone" class="label form__label label_light">Телефон</label>
+            <label for="footer-user-phone" class="label form__label label_light">Телефон</label>
             <input type="tel" name="userPhone" class="input form__input footer__input input_light" id="footer-user-phone" placeholder="Ваш номер телефона:">
           </div>
           <div class="input-group footer__input-group footer__input-group_full-width">
-            <label for="user-question" class="label form__label label_light">Вопрос</label>
+            <label for="footer-user-question" class="label form__label label_light">Вопрос</label>
             <input type="text" name="userQuestion" class="input form__input footer__input input_light" id="footer-user-question" placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
@@ -1021,10 +1029,10 @@
         <h4 class="address__title">Ростов на дону, Торговый центр Plaza Прямой телефон <a href="tel:+79997683299" class="address__tel">+7 (999) 768 32 99</a></h4>
         <div class="address__buttons">
           <a href="mailto:example@example.com" class="address__link">
-            <img src="img/footer/email.svg" alt="Email" class="address__icon">
+            <img data-src="img/footer/email.svg" src="img/footer/email.svg" alt="Email" class="address__icon lazyload">
           </a>
           <a href="https://www.instagram.com/" target="_blank" class="address__link">
-            <img src="img/footer/instagram.svg" alt="Instagram" class="address__icon">
+            <img data-src="img/footer/instagram.svg" src="img/footer/instagram.svg" alt="Instagram" class="address__icon lazyload">
           </a>
         </div>
       </div>
@@ -1033,10 +1041,10 @@
         <h4 class="address__title">Ростов на дону, Торговый центр Plaza Прямой телефон <a href="tel:+79997683299" class="address__tel">+7 (999) 768 32 99</a></h4>
         <div class="address__buttons">
           <a href="mailto:example@example.com" class="address__link">
-            <img src="img/footer/email.svg" alt="Email" class="address__icon">
+            <img data-src="img/footer/email.svg" src="img/footer/email.svg" alt="Email" class="address__icon lazyload">
           </a>
           <a href="https://www.instagram.com/" target="_blank" class="address__link">
-            <img src="img/footer/instagram.svg" alt="Instagram" class="address__icon">
+            <img data-src="img/footer/instagram.svg" src="img/footer/instagram.svg" alt="Instagram" class="address__icon lazyload">
           </a>
         </div>
       </div>
@@ -1072,15 +1080,15 @@
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="modal.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
-          <label for="user-name" class="label form__label label_light">Имя</label>
+          <label for="modal-user-name" class="label form__label label_light">Имя</label>
           <input type="text" name="userName" class="input form__input modal__input input_light" id="modal-user-name" placeholder="Как вас зовут:">
         </div>
         <div class="input-group modal__input-group">
-          <label for="user-phone" class="label form__label label_light">Телефон</label>
+          <label for="modal-user-phone" class="label form__label label_light">Телефон</label>
           <input type="tel" name="userPhone" class="input form__input modal__input input_light" id="modal-user-phone" placeholder="Ваш номер телефона:">
         </div>
         <div class="input-group modal__input-group">
-          <label for="user-email" class="label form__label label_light">Email</label>
+          <label for="modal-user-email" class="label form__label label_light">Email</label>
           <input type="email" name="userEmail" class="input form__input modal__input input_light" id="modal-user-email" placeholder="Ваш email">
         </div>
         <div class="policy modal__policy">
@@ -1107,7 +1115,7 @@
         </div>
         <div class="col-30">
           <a href="https://vk.com/" target="_blank" class="modal-success__link">
-            <img src="img/vk.svg" alt="v_kontakte" class="modal-success__icon">
+            <img data-src="img/vk.svg" src="img/vk.svg" alt="v_kontakte" class="modal-success__icon lazyload">
           </a>
         </div>
       </div>
@@ -1117,15 +1125,62 @@
   <!-- /.modal-success -->
 
   <button class="up-button">
-    <img class="up-button__image" src="img/up.svg" alt="стрелка вверх">
+    <img class="up-button__image lazyload" data-src="img/up.svg" src="img/up.svg" alt="стрелка вверх">
   </button>
   <!-- /.up-button -->
 
+  <!-- <script src="js/lazysizes.min.js" async=""></script> -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=a082ddd5-3b31-461f-901b-72c7e7320953&lang=ru_RU" type="text/javascript"></script>
+  <script>
+    setTimeout(function(){
+      var elem = document.createElement('script');
+      elem.type = 'text/javascript';
+      elem.src ='//api-maps.yandex.ru/2.1/?apikey=a082ddd5-3b31-461f-901b-72c7e7320953&lang=ru_RU&onload=getYaMap';
+      document.getElementsByTagName('body')[0].appendChild(elem);
+    }, 2000);
+
+    function getYaMap(){
+      var myMap = new ymaps.Map('map', {
+        center: [47.244729, 39.723187],
+        zoom: 17,
+        controls: ["typeSelector", "zoomControl"]
+      }, {
+        searchControlProvider: 'yandex#search'
+      }),
+
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Наш офис',
+        balloonContent: 'Вход со двора'
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/location.png',
+        // Размеры метки.
+        iconImageSize: [60, 60],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-5, -38]
+      });
+
+      // отключение скролла карты колесиком мыши
+      myMap.behaviors.disable('scrollZoom'); 
+
+      myMap.geoObjects
+        .add(myPlacemark)
+        .add(myPlacemarkWithContent);
+    }
+  </script>
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=a082ddd5-3b31-461f-901b-72c7e7320953&lang=ru_RU" type="text/javascript"></script> -->
   <script src="js/main.js"></script>
 </body>
 </html>

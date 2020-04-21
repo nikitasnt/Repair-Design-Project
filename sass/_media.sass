@@ -1,3 +1,53 @@
+// медиа для ie
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .hero
+    padding-bottom: 15%
+    &__scroll-down
+      padding-top: 33px
+  .instagram
+    &__link
+      position: relative
+      &::after
+        position: absolute
+        margin-top: 6px
+  .video
+    &__play
+      position: relative
+      margin: 160px auto
+  .team
+    &__badge
+      position: relative
+      margin-left: -270px
+      margin-bottom: -33px
+  .fantasies
+    &__words
+      transition: 0.2s
+      &::after
+        width: 62%
+        transition: 0.2s
+        background-color: transparent
+      &_active
+        &::after
+          transition: 0.2s
+          background-color: $primary
+  .modal-success
+    &__title
+      max-width: 340px
+  .up-button
+    display: none !important
+// медиа для firefox
+@media all and (min--moz-device-pixel-ratio:0) and (min-width: 1244px)
+  .team
+    &__badge
+      margin-left: -8.6rem
+@media all and (min--moz-device-pixel-ratio:0) and (min-width: 1066px)
+  .team
+    &__badge
+      margin-right: 11rem
+@media all and (min--moz-device-pixel-ratio:0) and (max-width: 570px)
+  .team
+    &__badge
+      margin-right: 11.2rem
 @media screen and ( max-width: 1386px )
   .clients
     &__card
@@ -8,8 +58,10 @@
         margin-left: -9rem
 @media screen and ( max-width: 1295px )
   .clients
+    &__call-back
+      margin-bottom: 0
     &__card
-      min-height: 40rem !important
+      min-height: 36rem !important
   .fantasies
     &__title
       max-width: 18rem
@@ -19,10 +71,21 @@
         margin-top: -3rem
       &_second
         margin-top: -6rem
-@media screen and ( max-width: 1243px )
+@media screen and ( max-width: 1250px ) and ( min-width: 1244px )
+  .menu
+    font-size: 0.9rem
+// попросили поменять
+@media screen and ( max-width: 1300px )
   .navbar
     &__item
       margin-right: 1rem
+//////////////////////
+@media screen and ( max-width: 1243px )
+  .clients
+    &__call-back
+      margin-bottom: 0
+    &__card
+      min-height: 32rem !important
   html
     font-size: 12px
 @media screen and ( max-width: 1243px )
@@ -52,6 +115,10 @@
       &_fourth
         margin-right: 0.6rem
         margin-top: 10.7rem
+@media screen and ( max-width: 1150px )
+  .clients
+    &__card
+      min-height: 35rem !important
 @media screen and ( max-width: 1100px )
   .measure
     &__description
@@ -117,12 +184,7 @@
       &:hover
         color: $light
   .clients
-    &__card
-      min-height: 50rem !important
-    &__icon
-      width: 1.4rem
-    &__value
-      font-size: 0.8rem
+    display: none
   .steps
     &__word
       &::after
@@ -269,10 +331,6 @@
   .swiper-container-2
     &_mobile
       display: block
-// @media screen and ( max-width: 1060px ) and ( min-width: 761px )
-//   .swiper-slide-1
-//     &__text_margin-left
-//       margin-left: 0
 @media screen and ( max-width: 1295px )
   .measure
     padding-top: 2rem
@@ -282,6 +340,9 @@
     padding-top: 0
   .fantasies
     margin-top: 3rem
+@media screen and ( max-width: 992px ) and ( min-width: 761px )
+  .team
+    margin-bottom: -5.8rem
 @media screen and ( max-width: 780px ) and ( min-width: 761px )
   .types, .design-project
     &__pricetag
@@ -292,8 +353,11 @@
       margin-bottom: 5rem
   .team
     margin-top: 29rem
+    padding-bottom: 25rem
   .types
     margin-bottom: -20rem
+  .footer
+    margin-top: -5.1rem
 @media screen and ( max-width: 570px )
   .contacts
     &__phone
@@ -313,18 +377,20 @@
     &__scroll-down
       display: none
     &__content
-      // max-width: 22.86rem
+      margin-top: 0.9rem
     &__title
       font-size: 1.91rem
       max-width: 26.75rem
     &__text
       max-width: 26.75rem
       font-size: 1.5rem
-      margin-bottom: 3.28rem
+      margin-bottom: 2.8rem
     &__button
       display: block
       width: 100%
       margin-bottom: 1.85rem
+      &_1
+        margin-bottom: 2.2rem
   .section-title
     &__heading
       font-size: 1.8rem
@@ -356,6 +422,9 @@
   .projects
     padding-top: 1.6rem
     padding-bottom: 26.8rem
+    &__word
+      &::after
+        display: none
   .fantasies
     margin-top: -9.3rem
   .project
@@ -425,6 +494,7 @@
       margin-bottom: 5rem
     &__wrap
       background-color: $dark
+      background-image: none
       margin-top: 0
       margin-bottom: 1.6rem
       padding: 2.5rem 0
@@ -505,10 +575,17 @@
     margin-bottom: -40.6rem
     &__mobile-image
       height: auto
-@media screen and ( max-height: 520px )
+@media screen and ( max-width: 350px )
+  .address
+    &__title
+      font-size: 1.2rem
+    &__tel
+      display: block
+@media screen and ( max-height: 610px )
   .hero
     &__scroll-down
       display: none
+@media screen and ( max-height: 520px )
   .modal
     &__dialog
       max-width: 32rem
@@ -521,6 +598,10 @@
       margin-bottom: 1.4rem
     &__button
       padding: 0.9rem 1.8rem
+@media screen and ( max-height: 510px )
+  .hero
+    &::after
+      display: none
 @media screen and ( max-height: 450px )
   .modal-success
     &__dialog

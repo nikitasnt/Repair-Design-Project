@@ -683,48 +683,102 @@ $(document).ready(function () {
 
 
   // маска для номера телефона
-  $('[type=tel').mask('+7 (000) 000-00-00', {placeholder: "+7 (000) 000-00-00"});
+  $('[type=tel').mask('+7 (000) 000-00-00', {placeholder: "Ваш номер телефона:"});
 
 
 
   // подключение карты от яндекс
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-      center: [47.244729, 39.723187],
-      zoom: 17,
-      controls: ["typeSelector", "zoomControl"]
-    }, {
-      searchControlProvider: 'yandex#search'
-    }),
+  // ymaps.ready(function () {
+  //   var myMap = new ymaps.Map('map', {
+  //     center: [47.244729, 39.723187],
+  //     zoom: 17,
+  //     controls: ["typeSelector", "zoomControl"]
+  //   }, {
+  //     searchControlProvider: 'yandex#search'
+  //   }),
 
-    // Создаём макет содержимого.
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
+  //   // Создаём макет содержимого.
+  //   MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+  //     '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+  //   ),
 
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-      hintContent: 'Наш офис',
-      balloonContent: 'Вход со двора'
-    }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
-      iconLayout: 'default#image',
-      // Своё изображение иконки метки.
-      iconImageHref: 'img/location.png',
-      // Размеры метки.
-      iconImageSize: [60, 60],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
-      iconImageOffset: [-5, -38]
-    });
+  //   myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+  //     hintContent: 'Наш офис',
+  //     balloonContent: 'Вход со двора'
+  //   }, {
+  //     // Опции.
+  //     // Необходимо указать данный тип макета.
+  //     iconLayout: 'default#image',
+  //     // Своё изображение иконки метки.
+  //     iconImageHref: 'img/location.png',
+  //     // Размеры метки.
+  //     iconImageSize: [60, 60],
+  //     // Смещение левого верхнего угла иконки относительно
+  //     // её "ножки" (точки привязки).
+  //     iconImageOffset: [-5, -38]
+  //   });
 
-    // отключение скролла карты колесиком мыши
-    myMap.behaviors.disable('scrollZoom'); 
+  //   // отключение скролла карты колесиком мыши
+  //   myMap.behaviors.disable('scrollZoom'); 
 
-    myMap.geoObjects
-      .add(myPlacemark)
-      .add(myPlacemarkWithContent);
-  });
+  //   myMap.geoObjects
+  //     .add(myPlacemark)
+  //     .add(myPlacemarkWithContent);
+  // });
+
+
+
+  // function init() {
+  //   var myMap = new ymaps.Map('map', {
+  //     center: [47.244729, 39.723187],
+  //     zoom: 17,
+  //     controls: ["typeSelector", "zoomControl"]
+  //   }, {
+  //     searchControlProvider: 'yandex#search'
+  //   }),
+
+  //   // Создаём макет содержимого.
+  //   MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+  //     '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+  //   ),
+
+  //   myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+  //     hintContent: 'Наш офис',
+  //     balloonContent: 'Вход со двора'
+  //   }, {
+  //     // Опции.
+  //     // Необходимо указать данный тип макета.
+  //     iconLayout: 'default#image',
+  //     // Своё изображение иконки метки.
+  //     iconImageHref: 'img/location.png',
+  //     // Размеры метки.
+  //     iconImageSize: [60, 60],
+  //     // Смещение левого верхнего угла иконки относительно
+  //     // её "ножки" (точки привязки).
+  //     iconImageOffset: [-5, -38]
+  //   });
+
+  //   // отключение скролла карты колесиком мыши
+  //   myMap.behaviors.disable('scrollZoom'); 
+
+  //   myMap.geoObjects
+  //     .add(myPlacemark)
+  //     .add(myPlacemarkWithContent);
+  // }
+  
+  // // карта создается при скролле до .footer
+  // var oneMap = false; // чтобы была только одна карта
+  // var target = $('.footer');
+  // var targetPos = target.offset().top;
+  // var winHeight = $(window).height();
+  // var scrollToElem = targetPos - winHeight;
+  // $(window).scroll(function(){
+  //   var winScrollTop = $(this).scrollTop();
+  //   if((winScrollTop > scrollToElem) && (oneMap == false)){
+  //     oneMap = true;
+  //     ymaps.load(init());
+  //   }
+  // });
 
 
 

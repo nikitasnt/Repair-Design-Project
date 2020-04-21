@@ -9,6 +9,7 @@
     margin-top: -19rem
     margin-bottom: 1.65rem
     padding: 2.5rem
+    background: $dark url('../img/bg-lines.svg') no-repeat center / cover
   &__title
     text-transform: uppercase
     font-family: 'Yeseva One', cursive
@@ -24,6 +25,9 @@
     max-width: 37.042rem
     margin: auto
   &__input
+    &::-moz-placeholder, :-moz-placeholder
+      opacity: 1
+      color: $light
     padding-top: 0.3rem
     &-group
       display: flex
